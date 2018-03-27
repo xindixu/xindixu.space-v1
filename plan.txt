@@ -1,0 +1,34 @@
+website:
+
+Linked:
+        - Home
+1       - About
+1       - Contact
+        - Portfolio:
+1           - Advertising
+1           - CS
+1           - Crafts
+1           - Digital Media Production
+
+        Unlinked:
+1       - Groovy 
+1       - Inspiro Fest
+1       - Tesla
+1       - Teo
+        - Idea Journal 
+
+        - Chemistry Monopoly
+        - Processing
+        - Look for UT
+1       - Defend the Throne
+
+0       - Enron Raptors
+1       - Texas Capitol 
+
+        - Graphic 
+        - Animated 
+        - Live 
+
+1       - Cover 
+
+Structural update:

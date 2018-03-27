@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- Bootstrap -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="main.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- JQueryUI -->
+<script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<link href="jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" type="text/css">
+<!-- Custome -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="custom.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+<script src="js/main.js" type="text/javascript"></script>
+<title>Inspiro Fest - Advertising</title>
+
+<script src="js/p5.min.js"></script>
+<script src="js/p5.dom.min.js"></script>
+<script src="scared_geometric/web-sg.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#sidebar-menu" data-offset="80">
+<header>
+	<div class="text-center"> <a href="index.html"><img class="img-fluid" src="image/logo1.png" alt="logo" width="400"/></a> </div>
+</header>
+<nav class="navbar navbar-expand-sm sticky-top" id="topbar-menu">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+	<div class="collapse navbar-collapse" id="mainNavBar">
+		<ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
+			<li class="nav-item"> <a class="nav-link" href="#">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="index.html">About<span class="sr-only">(current)</span></a></li>
+			<!-- Dropdown -->
+			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Portfolio </a>
+				<div class="dropdown-menu"> <a class="dropdown-item" href="advertising.html">Advertising</a> <a class="dropdown-item" href="computer-science.html">Computer Science</a> <a class="dropdown-item" href="crafts.html">Crafts</a><a class="dropdown-item" href="digital-media-production.html">Digital Media Production</a> </div>
+			</li>
+			<li class="nav-item"><a class="nav-link" href="cat.html">Cat</a></li>
+			<li class="nav-item"><a class="nav-link" href="contact.html">Contact </a></li>
+		</ul>
+	</div>
+</nav>
+<div class="container d-none d-xl-block d-print-none">
+	<nav id="sidebar-menu" class="navbar navbar-light navbar-expand-sm flex-column">
+		<div class="container">
+			<nav class="navbar-nav flex-column"> 
+				<a class="nav-link" href="#item-1">Project Description</a>
+				<a class="nav-link" href="#item-2">Final Products</a>
+				<nav class="navbar-nav flex-column"> 
+					<a class="nav-link ml-2" href="#item-2-1">Interactive</a>
+					<a class="nav-link ml-2" href="#item-2-2">Flyer</a>
+					<a class="nav-link ml-2" href="#item-2-3">Invitation</a>
+					<a class="nav-link ml-2" href="#item-2-4">GIF for Social Media</a>					
+					<a class="nav-link ml-2" href="#item-2-5">Swag</a>
+				
+				</nav>
+				<a class="nav-link" href="#item-3">Testimonial</a> 
+				<!--nav class="navbar-nav flex-column"> 	
+					<a class="nav-link ml-3" href="#item-3-1">Hands</a> 
+					<a class="nav-link ml-3" href="#item-3-2">Claws</a> 
+					<a class="nav-link ml-3" href="#item-3-3">Lights</a>
+				</nav--> 
+			</nav>
+		</div>
+	</nav>
+</div>
+<div class="container col-md-10 col-lg-8 justify-content-center">
+	<h1>Inspiro Fest</h1>
+	<div class="content" id="item-1">
+		<h2>Project Description</h2>
+		<p>This is my first project as Marketing/Advertising intern at B*TruArts. Inspiro fest is a festival held every year. We invite local artists, musicians, performers come to our place, to show their amazing works. </p>
+	<div class="content" id="item-2">
+		<h2>Final Products</h2>
+	<div class="content" id="item-2-1">
+		<h3>Interactive</h3>
+			<style>
+			button{
+			  background-color: #FFFFFF; 
+			  color: black;
+			  font-size:13px;
+			  font-family: 'Montserrat', sans-serif;;
+			  border:none;
+			  text-align:center;
+			}
+			</style>
+		<div id="sketch-holder" class="text-center"></div>
+	</div>
+		
+	<div class="content" id="item-2-2">
+		<h3>Flyer</h3>
+		<div class="text-center"> <img class="img-fluid" src="image/ad/inspiro/flyer.png" alt="flyer" width="100%"/> </div>
+	</div>
+		
+	<div class="content" id="item-2-3">
+		<h3>Invitation</h3>
+		<div class="text-center"> <img class="img-fluid" src="image/ad/inspiro/sponsor_poster.png" alt="invitation" width="100%"/> </div>
+	</div>
+	<div class="row">
+		<div class="content col-sm" id="item-2-4">
+			<h3>GIF for Social Media</h3>
+		<div class="text-center"> <img class="img-fluid" src="image/ad/inspiro/gif.gif" alt="gif" width="100%"/> </div>
+		</div>
+
+		<div class="content col-sm" id="item-2-5">
+			<h3>Swag<span class="badge badge-light">Ongoing</span></h3>
+		<!--div class="text-center"> <img class="img-fluid" src="image/ad/inspiro/gif.gif" alt="gif" width="100%"/> </div-->
+		</div>
+	</div>
+	<div class="content" id="item-3">
+		<h2>Testimonial<span class="badge badge-light">Ongoing</span></h2>
+		<!--div id="item-3-1">
+		<h3>Hand</h3>
+		<p>Delena was good at making artistic designs, while I was good at making incremental innovations. Basically, after we presented on Monday, we would discuss the next steps, based on suggestions, feedbacks, field-notes from classmates, performers, our director, and designer. Then, we would both work on editing the file in Illustrator, and I would go to the foundry and laser cut those wood pieces before Wednesday. After that, we would go paint those pieces, and I would assemble everything together. Delena made most of the gloves, and she has done a great job on sewing. </p>
+		<p>Then, we all explored on media menu. Finally, Regina put everything together in PowerPoint, and make it neat and stylish. </p>
+	</div>
+	<div id="item-3-2">
+		<h3>Claws</h3>
+		<p> At the middle of the semester, one of our classmates dropped the course, so we took over with making teeth and claws. I designed the 3D model in Maya, and cut it into two different lengths for teeth and claws. Then, I learned 3D printing process and started 3D printing. It was a very time-consuming process, and I am very thankful that our classmates contributed their time in monitoring the printer for us. </p>
+	</div>
+	<div id="item-3-3">
+		<h3>Lights</h3>
+		<p>During the final weeks, I jumped into the electric team, helping them to solder the central shields for lighting effects, and making the LED stripes, and EL wires. Since they were lack of people to meet the deadline, we worked very hard, late until 2 am, and all weekends. On Friday, few days before the unleashing date, we found a severe design problem: the LED stripes should be connected in parallel, to ensure the flow direction and enough voltage flowing through. With our hard work, thankfully, we got everything to work on the unleashing event. </p>
+	</div-->
+	</div>
+	
+</div>
+<footer>
+	<div class="text-center">
+		<ul class="list-unstyled list-inline">
+			<li class="list-inline-item"><a href="https://www.linkedin.com/in/xindi-xu/"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a></li>
+			<li class="list-inline-item"><a href="https://github.com/xindixu"><i class="fa fa-github" style="font-size:24px"></i></a></li>
+			<li class="list-inline-item"><a href="https://www.youtube.com/channel/UCWnA13M9WCIXbl9yl4qs6_Q"> <i class="fa fa-youtube-play" style="font-size:24px"></i></a></li>
+		</ul>
+		<p>The University of Texas At Austin&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Austin, TX, 78705, USA&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:512-775-1736">+1 (512)775-1736</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:xindixu@utexas.edu">xindixu@utexas.edu</a></p>
+	</div>
+</footer>
+</body>
+</html>

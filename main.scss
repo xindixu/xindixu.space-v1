@@ -1,0 +1,23 @@
+$theme-colors: (
+  "primary": #FBAE4B,
+  "secondary": #F37343,
+  "info": #FEE9DE,
+  "light": #FEE9DE,
+    "dark": #AF6A45
+);
+
+$font-size-base:              0.8rem !default;
+
+$h1-font-size:                $font-size-base * 2 !default;
+$h2-font-size:                $font-size-base * 1.75 !default;
+$h3-font-size:                $font-size-base * 1.5 !default;
+$h4-font-size:                $font-size-base * 1.25 !default;
+$h5-font-size:                $font-size-base * 1.1 !default;
+$h6-font-size:                $font-size-base !default;
+
+$headings-color:              #FBAE4B !default;
+
+$badge-font-size:                   50% !default;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
