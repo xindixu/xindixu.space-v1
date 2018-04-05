@@ -102,6 +102,9 @@ html:hover .overlay {
 
 	
 @media (max-width:599px) {
+.overlay {
+    opacity: 1;
+}
 p {
 	display: block;
 }
@@ -115,6 +118,7 @@ ul, li, i {
 @media only screen and (min-width: 600px) {
 .overlay {
 	transform: translate(-50%, -50%);
+    opacity: 1;
 }
 ul, li, i {
 	margin-top: 10px;
@@ -126,6 +130,7 @@ ul, li, i {
 @media only screen and (min-width: 768px) {
 .overlay {
 	transform: translate(-80%, -50%);
+    opacity: 0.4;
 }
 h1 {
 	font-size: 6rem;
@@ -140,6 +145,7 @@ ul, li, i {
 @media only screen and (min-width: 992px) {
 .overlay {
 	transform: translate(-90%, -50%);
+    opacity: 0.4;
 }
 h1 {
 	font-size: 6rem;
@@ -152,6 +158,9 @@ ul, li, i {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+.overlay {
+    opacity: 0.4;
+    }
 h1 {
 	font-size: 8rem;
 }

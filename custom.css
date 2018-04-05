@@ -207,35 +207,9 @@ a.tlp{
 }
 
 /* hover effect */
-@media screen and (max-width: 31.5em) {
-.grid {
-	padding: 10px 10px 100px 10px;
-}
-.grid li {
-	width: 100%;
-	min-width: 300px;
-}
-}
-
-.grid {
-	padding: 20px 20px 100px 20px;
-	max-width: 1300px;
-	margin: 0 auto;
-	list-style: none;
-	text-align: center;
-}
-
-.grid li {
-	display: inline-block;
-	width: 440px;
-	margin: 0;
-	padding: 20px;
-	text-align: left;
-	position: relative;
-}
 
 figure {
-	margin: 0;
+	margin: 10px;
 	position: relative;
 }
 

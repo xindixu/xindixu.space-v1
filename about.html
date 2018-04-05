@@ -82,7 +82,7 @@ div,li {
 <div class="text-center my-5" id="photo"> <img class="img-fluid" src="image/photo.png" alt="Profile photo" width="600"/></div>
 <div class="container col-md-12 col-lg-10 justify-content-center">
 
-	<div class="row">
+	<div class="row" id="cat">
 		<div class="text-center col-sm-2"> <img class="img-fluid rounded-circle" src="image/underconstruction.gif" width="100px" height="100px"/> </div>
 		<div class="col-sm-4 pt-3">
 			<p>I apologize that this site is still under construction. If you see me, a hard-working cat with white gloves on, it means that I am working on that page diligently. Please check it back later.</p>
@@ -148,9 +148,11 @@ div,li {
     // Changing the defaults
 window.sr = ScrollReveal({ reset: true });
 sr.reveal('#photo',{reset: false});
+    
+sr.reveal('#cat',{duration: 2000, scale: 1, origin: 'left', reset: false});
 // Customizing a reveal set
     
-sr.reveal('.an1', { duration: 2000,reset: false });
+sr.reveal('.an1', { duration: 2000, reset: false });
 sr.reveal('#skills li', { duration: 1000,reset: false },30);
 
 
