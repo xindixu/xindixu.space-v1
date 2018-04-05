@@ -36,11 +36,12 @@ function setup() {
 
     for(var i = 0; i < word.length; i++){
        var b = createButton(word[i]).parent('sketch-holder');
-       b.position(100+i*120, 320);
+       b.position("relative");
+       b.position(30+i*130, 300);
        b.mouseClicked(changePattern);
-       b.size(100);
+       b.size(120);
        textAlign(CENTER);
-       textSize(50);
+       textSize(30);
        btn.push(b);
     }
 
