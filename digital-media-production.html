@@ -11,23 +11,46 @@
 <link href="main.css" rel="stylesheet" type="text/css">
 
 <!-- Custome -->
+<link rel="shortcut icon" href="image/logo3.png" type="image/x-icon" />
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href="custom.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="js/main.js" type="text/javascript"></script>
+	    
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-115061046-1', 'auto');
+    
+<?php
+    if( isset( $_COOKIE['user_is_admin'] ) ) {
+        echo 'ga(\'set\', \'dimension1\', \'true\');';
+    }
+?>
+var dimensionValue = 'User is Admin';
+ga('set', 'dimension1', dimensionValue);
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
 <title>Digital Media Production - Portfolio</title>
 </head>
 
 <body>
 <header>
-	<div class="text-center"> <a href="index.html"><img class="img-fluid" src="image/logo1.png" alt="logo" width="400"/></a></div>
+	<div class="text-center"> <a href="about.html"><img class="img-fluid" src="image/logo1.png" alt="logo" width="400"/></a></div>
 </header>
 <nav class="navbar navbar-expand-sm sticky-top" id="topbar-menu">
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 	<div class="collapse navbar-collapse" id="mainNavBar">
 		<ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
-			<li class="nav-item"> <a class="nav-link" href="#">Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+			<li class="nav-item"> <a class="nav-link" href="home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 			<!-- Dropdown -->
 			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Portfolio </a>
 				<div class="dropdown-menu"> <a class="dropdown-item" href="advertising.html">Advertising</a> <a class="dropdown-item" href="computer-science.html">Computer Science</a> <a class="dropdown-item" href="crafts.html">Crafts</a><a class="dropdown-item" href="digital-media-production.html">Digital Media Production</a> </div>
@@ -41,32 +64,24 @@
 	<article class="intro">
 		<h1>Digital Media Production</h1>
 		<section class="slogan">
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-		</section>
-		<section class="thoughts">
-			<p> Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-		</section>
-	</article>
-	<article class="update">
-		<section class="text">
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. </p>
+			<p>Ever since I was a child, I have been amazed by the rich format, interesting content and vast volume of video and animation online. I started exploring video editing/production since high school. Last year, I was lucky enough to enroll in a summer course on Digital Media Production, where I familiarized myself with Adobe Premiere, After Effects, Animate, and Autodesk Maya.</p>
 		</section>
 	</article>
 	<article class="projects">
 		<div class="card-deck">
-			<div class="card mb-4"> <img src="image/digital/static.png" alt="..." class="card-img-top">
+			<div class="card mb-4"> <a><img src="image/digital/static.png" class="card-img-top"></a>
 				<div class="card-body">
 					<h3 class="card-title">Static</h3>
 					<h5 class="card-subtitle mb-2 text-muted">Graphics, UI, Logo, Print</h5>
-					<a href="#" class="btn btn-outline-primary">Learn more</a></div>
+					<a href="#" class="btn btn-outline-primary disabled">Learn more</a></div>
 			</div>
-			<div class="card mb-4"> <img src="image/digital/motion.gif" alt="..." class="card-img-top">
+			<div class="card mb-4"> <a href="animated.html"><img src="image/digital/motion.gif" class="card-img-top"></a>
 				<div class="card-body">
 					<h3 class="card-title">Animated</h3>
 					<h5 class="card-subtitle mb-2 text-muted">2D Animation, GIF</h5>
 					<a href="animated.html" class="btn btn-outline-primary">Learn more</a></div>
 			</div>
-			<div class="card mb-4"> <img src="image/digital/live.gif" alt="..." class="card-img-top">
+			<div class="card mb-4"> <a href="live.html"><img src="image/digital/live.gif" class="card-img-top"></a>
 				<div class="card-body">
 					<h3 class="card-title">Live</h3>
 					<h5 class="card-subtitle mb-2 text-muted">Video Editing, Production</h5>
@@ -85,5 +100,13 @@
 		<p>The University of Texas At Austin&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Austin, TX, 78705, USA&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:512-775-1736">+1 (512)775-1736</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:xindixu@utexas.edu">xindixu@utexas.edu</a></p>
 	</div>
 </footer>
+      <script>
+    // Changing the defaults
+window.sr = ScrollReveal({ reset: true });
+sr.reveal('.card-deck .card',{scale:1, origin:'left', reset: false, duration: 1000, distance: '40px'}, 50);
+// Customizing a reveal set
+
+
+    </script>
 </body>
 </html>

@@ -15,6 +15,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
 <!-- Custome -->
+<link rel="shortcut icon" href="image/logo3.png" type="image/x-icon" />
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="custom.css" rel="stylesheet" type="text/css">
@@ -30,14 +31,14 @@
 
 <body>
 	<header>
-	<div class="text-center"> <a href="index.html"><img class="img-fluid" src="image/logo1.png" alt="logo" width="400"/></a></div>
+	<div class="text-center"> <a href="about.html"><img class="img-fluid" src="image/logo1.png" alt="logo" width="400"/></a></div>
 </header>
 <nav class="navbar navbar-expand-sm sticky-top" id="topbar-menu">
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 	<div class="collapse navbar-collapse" id="mainNavBar">
 		<ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
-			<li class="nav-item"> <a class="nav-link" href="#">Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+			<li class="nav-item"> <a class="nav-link" href="home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 			<!-- Dropdown -->
 			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Portfolio </a>
 				<div class="dropdown-menu"> <a class="dropdown-item" href="advertising.html">Advertising</a> <a class="dropdown-item" href="computer-science.html">Computer Science</a> <a class="dropdown-item" href="crafts.html">Crafts</a><a class="dropdown-item" href="digital-media-production.html">Digital Media Production</a> </div>
@@ -53,7 +54,7 @@
 <div class="container cs-style-3 grid">
 		<ul>
 			<li>
-				<figure> <a data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/ggsvP_ijrgQ" href="javascript:;" data-caption="A Love Story Between Dog and Mouse"> <img src="image/digital/animated/mouse&dog.jpg" class="img-fluid" style="width:100%"></a>
+				<figure> <a data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/ggsvP_ijrgQ" href="javascript:;" > <img src="image/digital/animated/mouse&dog.jpg" class="img-fluid" style="width:100%"></a>
 					<figcaption>
 						<h4>A Love Story Between Dog and Mouse</h4>
 					</figcaption>
@@ -91,8 +92,13 @@
 			
 		</ul>
 </div>
-<!-- reference only--> 
-<!--a href="https://youtu.be/muHKNzU0kMc" data-toggle="lightbox" data-gallery="youtubevideos" class="col-sm-4"> <img src="image/digital/live/mouthSync.jpg" class="img-fluid"> </a-->
+<script>
+$(document).ready(function(){
+	$("img").contextMenu(function(){
+		return false;
+	})
+})	
+</script>
 
 </body>
 </html>

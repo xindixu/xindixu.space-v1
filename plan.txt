@@ -32,3 +32,5 @@ Linked:
 1       - Cover 
 
 Structural update:
+remove all links .html
+1 create error files 

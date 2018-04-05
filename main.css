@@ -174,7 +174,10 @@ img {
   border-style: none; }
 
 svg:not(:root) {
-  overflow: hidden; }
+	overflow: hidden;
+	-webkit-box-shadow: inset 0px 0px;
+	box-shadow: inset 0px 0px;
+}
 
 table {
   border-collapse: collapse; }
@@ -6490,5 +6493,3 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #ddd !important; } }
-
-/*# sourceMappingURL=main.css.map */

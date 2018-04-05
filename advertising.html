@@ -9,25 +9,51 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <link href="main.css" rel="stylesheet" type="text/css">
+	
 
 <!-- Custome -->
+<link rel="shortcut icon" href="image/logo3.png" type="image/x-icon" />
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href="custom.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="js/main.js" type="text/javascript"></script>
+    
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-115061046-1', 'auto');
+    
+<?php
+    if( isset( $_COOKIE['user_is_admin'] ) ) {
+        echo 'ga(\'set\', \'dimension1\', \'true\');';
+    }
+?>
+var dimensionValue = 'User is Admin';
+ga('set', 'dimension1', dimensionValue);
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
 <title>Advertising - Portfolio</title>
 </head>
 
 <body>
 <header>
-	<div class="text-center"> <a href="index.html"><img class="img-fluid" src="image/logo1.png" alt="logo" width="400"/></a></div>
+	<div class="text-center"> <a href="about.html"><img class="img-fluid" src="image/logo1.png" alt="logo" width="400"/></a></div>
 </header>
 <nav class="navbar navbar-expand-sm sticky-top" id="topbar-menu">
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 	<div class="collapse navbar-collapse" id="mainNavBar">
 		<ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
-			<li class="nav-item"> <a class="nav-link" href="#">Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+			<li class="nav-item"> <a class="nav-link" href="home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 			<!-- Dropdown -->
 			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Portfolio </a>
 				<div class="dropdown-menu"> <a class="dropdown-item" href="advertising.html">Advertising</a> <a class="dropdown-item" href="computer-science.html">Computer Science</a> <a class="dropdown-item" href="crafts.html">Crafts</a><a class="dropdown-item" href="digital-media-production.html">Digital Media Production</a> </div>
@@ -55,16 +81,16 @@
 	<article class="projects">
 		<h2> Projects </h2>
 		<section id="groovy">
-			<div class="card"> <a href="groovy-automotive.html"><img src="image/ad/groovy00.png" alt="Groovy Automotive" class="card-img-top"></a>
+			<div class="card"> <a href="groovy-automotive.html"><img src="image/major/groovy00.png" alt="Groovy Automotive" class="card-img-top"></a>
 				<div class="card-body">
 					<h3 class="card-title">Groovy Automotive&nbsp;<span class="badge badge-light badge-pill">Ongoing</span></h3>
 					<h5 class="card-subtitle mb-2 text-muted">Media Planning</h5>
-					<p class="card-text">This is a hypothetical media planning project for Austin local brand, Groovy Automotive. We, media-only advertising agency, Agen6, consist of 6 people who are from 6 different countries, come to Austin during different stages of life. Our proud local brand finally decided to open an experimental store in Colorado Springs, CO, and are going to invest us with $150,000 in their media placement. </p>
+					<p class="card-text">This is a hypothetical media planning project for Austin local brand, Groovy Automotive. We, media-only advertising agency, Agen6, consist of 6 people who are from 6 different countries, come to Austin during different stages of life. Our proud local brand finally decided to open an experimental store in Colorado Springs, CO, and are going to invest us with $15,000 in their media placement. </p>
 					<a href="groovy-automotive.html" class="btn btn-outline-primary">Learn more</a></div>
 			</div>
 		</section>
 		<section id="inspiro">
-			<div class="card"><a href="inspiro-fest.html"><img src="image/ad/inspiro00.png" alt="Inspiro Fest" class="card-img-top"></a>
+			<div class="card"><a href="inspiro-fest.html"><img src="image/major/inspiro00.png" alt="Inspiro Fest" class="card-img-top"></a>
 				<div class="card-body">
 					<h3 class="card-title">Inspiro Fest&nbsp;<span class="badge badge-light badge-pill">Ongoing</span></h3>
 					<h5 class="card-subtitle mb-2 text-muted">Creative Execution</h5>
@@ -75,14 +101,14 @@
 		</section>
 		<section id="tesla&teo">
 			<div class="card-deck">
-				<div class="card"><a href="tesla.html"><img src="image/ad/tesla00.png" alt="Telsa Motor" class="card-img-top"></a>
+				<div class="card"><a href="tesla.html"><img src="image/major/tesla00.png" alt="Telsa Motor" class="card-img-top"></a>
 					<div class="card-body">
 						<h3 class="card-title">Next Thing You Charge</h3>
 						<h5 class="card-subtitle mb-2 text-muted">Advertising Campaign &amp; Execution</h5>
 						<p class="card-text">This is a hypothetical advertising campaign for Telsa Motor, aiming to advocate the "Tesla Lifestyle" created by our team, Little Bean Co. "Next Thing You Charge" is our tagline, implying that our revolutionary Telsa Motor is the future, and the future is around the corner. Our electronic car is just another "device" you need to add to your existing devices. </p>
 						<a href="tesla.html" class="btn btn-outline-primary">Learn more</a> </div>
 				</div>
-				<div class="card"><a href="teo.html"><img src="image/ad/teo00.png" alt="Teo Gelato" class="card-img-top"></a>
+				<div class="card"><a href="teo.html"><img src="image/major/teo00.png" alt="Teo Gelato" class="card-img-top"></a>
 					<div class="card-body">
 						<h3 class="card-title">Be With Your Friend, and Teo</h3>
 						<h5 class="card-subtitle mb-2 text-muted">Brand Essence</h5>
@@ -94,9 +120,9 @@
 		<section id="ideas">
 			<div class="card">
 				<div class="card-body">
-					<h3 class="card-title">Idea Journal</h3>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum eros sed neque egestas mattis. Vestibulum iaculis arcu a dolor posuere suscipit. Pellentesque iaculis purus quis justo interdum, sit amet varius urna scelerisque. Curabitur luctus, orci ut pulvinar rutrum, est lorem tincidunt orci, ut fringilla nibh quam quis massa. Maecenas ut congue eros. Morbi fringilla ex eu bibendum interdum. Morbi molestie, ligula quis egestas tempor, ligula mi faucibus felis, eu gravida leo leo a nisi. In tempor fringilla enim in maximus. Aenean placerat lectus vel feugiat elementum.</p>
-					<a href="#" class="btn btn-outline-primary">Learn more</a></div>
+					<h3 class="card-title">Idea Journal&nbsp;<span class="badge badge-dark badge-pill">Under Construction</span></h3>
+					<p class="card-text">Advertising is such a creative world that I might be able to apply my immature, weird, crazy thoughts. My ideal journal includes my ideas, not limited to advertising, interesting marketing samples I saw and more!</p>
+					<a href="#" class="btn btn-outline-primary disabled">Learn more</a></div>
 			</div>
 		</section>
 	</article>
@@ -111,5 +137,14 @@
 		<p>The University of Texas At Austin&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Austin, TX, 78705, USA&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:512-775-1736">+1 (512)775-1736</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:xindixu@utexas.edu">xindixu@utexas.edu</a></p>
 	</div>
 </footer>
+    
+    <script>
+    // Changing the defaults
+window.sr = ScrollReveal({ reset: true });
+sr.reveal('article.projects section',{reset: false});
+// Customizing a reveal set
+
+
+    </script>
 </body>
 </html>

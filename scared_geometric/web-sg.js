@@ -180,7 +180,7 @@ function draw() {
                 stroke(100+colorI*20, 21, 12+colorI*50);
             }
             else{
-                stroke(23+colorI*20, 121, 2+colorI*50);
+                stroke(233, 185, 2+colorI*2);
             }
 
             if(counter > 5000){
