@@ -1,206 +1,190 @@
-$(function () { 
-	var _0hs = $('#_0hs'),
-		_0US = $('#_0US'),
-		_0arch = $('#_0arch'),
-		_0fp1 = $('#_0fp1'),
-		_0fp2 = $('#_0fp2'),
-		_0fp3 = $('#_0fp3'),
-		_0fp4 = $('#_0fp4'),
-		_0fp5 = $('#_0fp5'),
-		_0fp6 = $('#_0fp6'),
-		_0fp7 = $('#_0fp7'),
-		_0fp8 = $('#_0fp8'),
-		_0t1 = $('#_0tx1'),
-		_0t2 = $('#_0tx2'),
-		_0t3 = $('#_0tx3'),
-		_0library = $('#_0library'),
-		_0wheel = $('#_0wheel');
-	
-	var _1hs = $('#_1hs'),
-		_1bevo = $('#_1bevo'),
-		_1maga = $('#_1maga'),
-		_1wall = $('#_1wall'),
-		_1fp1 = $('#_1fp1'),
-		_1fp2 = $('#_1fp2'),
-		_1fp3 = $('#_1fp3'),
-		_1fp4 = $('#_1fp4'),
-		_1fp5 = $('#_1fp5'),
-		_1fp6 = $('#_1fp6'),
-		_1fp7 = $('#_1fp7'),
-		_1fp8 = $('#_1fp8'),
-		_1fp9 = $('#_1fp9'),
-		_1fp10 = $('#_1fp10'),
-		_1fp11 = $('#_1fp11'),
-		_1fp12 = $('#_1fp12'),
-		_1t1 = $('#_1tx1'),
-		_1t2 = $('#_1tx2'),
-		_1t3 = $('#_1tx3'),
-		_1tower = $('#_1tower'),
-		_1plane = $('#_1plane');
+{
+	setTimeout(() => document.body.classList.add('render'), 60);
+	const navdemos = Array.from(document.querySelectorAll('nav.demos > .demo'));
+	const navigate = (linkEl) => {
+		document.body.classList.remove('render');
+		document.body.addEventListener('transitionend', () => window.location = linkEl.href);
+	};
+	navdemos.forEach(link => link.addEventListener('click', (ev) => {
+		ev.preventDefault();
+		navigate(ev.target);
+	}));
+}
 
-	var _2belo = $('#_2belo'),
-		_2Japan = $('#_2Japan'),
-		_2marry = $('#_2marry'),
-		_2casper = $('#_2casper'),
-		_2media = $('#_2media'),
-		_2fp1 = $('#_2fp1'),
-		_2fp2 = $('#_2fp2'),
-		_2fp3 = $('#_2fp3'),
-		_2fp4 = $('#_2fp4'),
-		_2fp5 = $('#_2fp5'),
-		_2fp6 = $('#_2fp6'),
-		_2fp7 = $('#_2fp7'),
-		_2fp8 = $('#_2fp8'),
-		_2fp9 = $('#_2fp9'),
-		_2fp10 = $('#_2fp10'),	
-		_2cp1 = $('#_2cp1'),
-		_2cp2 = $('#_2cp2'),
-		_2cp3 = $('#_2cp3'),
-		_2cp4 = $('#_2cp4'),
-		_2cp5 = $('#_2cp5'),
-		_2cp6 = $('#_2cp6'),
-		_2cp7 = $('#_2cp7'),
-		_2cp8 = $('#_2cp8'),
-		_2cp9 = $('#_2cp9'),
-		_2cp10 = $('#_2cp10'),
-		_2cp11 = $('#_2cp11'),
-		_2cp12 = $('#_2cp12'),
-		_2cp13 = $('#_2cp13'),
-		_2t1 = $('#_2tx1'),
-		_2t2 = $('#_2tx2'),
-		_2t3 = $('#_2tx3'),
-		_2t4 = $('#_2tx4');
-
-	
-	var flightpath = {
-			entry : {
-				curviness: 1.25,
-				autoRotate: true,
-				values: [
-						{x: 300,	y: 280},
-						{x: 400,	y: 310}
-					]
-			},
-			looping : {
-				curviness: 1.25,
-				autoRotate: true,
-				values: [
-						{x: 510,	y: 360},
-						{x: 620,	y: 240},
-						{x: 500,	y: 200},
-						{x: 380,	y: 320},
-						{x: 500,	y: 360},
-						{x: 580,	y: 320},
-						{x: 620,	y: 315}
-					]
-			},
-			leave : {
-				curviness: 1.25,
-				autoRotate: true,
-				values: [
-						{x: 660,	y: 320},
-						{x: 800,	y: 430},
-						{x: $(window).width() + 800,	y: 500},
-					]
-			}
+{
+    // From https://davidwalsh.name/javascript-debounce-function.
+	function debounce(func, wait, immediate) {
+		var timeout;
+		return function() {
+			var context = this, args = arguments;
+			var later = function() {
+				timeout = null;
+				if (!immediate) func.apply(context, args);
+			};
+			var callNow = immediate && !timeout;
+			clearTimeout(timeout);
+			timeout = setTimeout(later, wait);
+			if (callNow) func.apply(context, args);
 		};
-		var controller = new ScrollMagic.Controller();
-		var slides = new TimelineMax()
+    };
+    
+    class Slideshow {
+        constructor(el) {
+            this.DOM = {};
+            this.DOM.el = el;
+            this.settings = {
+                animation: {
+                    slides: {
+                        duration: 600,
+                        easing: 'easeOutQuint'
+                    },
+                    shape: {
+                        duration: 300,
+                        easing: {in: 'easeOutQuint', out: 'easeOutQuad'}
+                    }
+                },
+                frameFill: '#f1f1f1'
+            }
+            this.init();
+        }
+        init() {
+            this.DOM.slides = Array.from(this.DOM.el.querySelectorAll('.slides > .slide'));
+            this.slidesTotal = this.DOM.slides.length;
+            this.DOM.nav = this.DOM.el.querySelector('.slidenav');
+            this.DOM.nextCtrl = this.DOM.nav.querySelector('.slidenav__item--next');
+            this.DOM.to1Ctrl = this.DOM.nav.querySelector('.slidenav__item--1');
+            this.DOM.to2Ctrl = this.DOM.nav.querySelector('.slidenav__item--2');
+            this.DOM.to3Ctrl = this.DOM.nav.querySelector('.slidenav__item--3');
+            this.DOM.to4Ctrl = this.DOM.nav.querySelector('.slidenav__item--4');
+            this.DOM.prevCtrl = this.DOM.nav.querySelector('.slidenav__item--prev');
+            this.current = 0;
+            this.createFrame(); 
+            this.initEvents();
+        }
+        createFrame() {
+            this.rect = this.DOM.el.getBoundingClientRect();
+            this.frameSize = this.rect.width/12;
+            this.paths = {
+                initial: this.calculatePath('initial'),
+                final: this.calculatePath('final')
+            };
+            this.DOM.svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            this.DOM.svg.setAttribute('class', 'shape');
+            this.DOM.svg.setAttribute('width','100%');
+            this.DOM.svg.setAttribute('height','100%');
+            this.DOM.svg.setAttribute('viewbox',`0 0 ${this.rect.width} ${this.rect.height}`);
+            this.DOM.svg.innerHTML = `<path fill="${this.settings.frameFill}" d="${this.paths.initial}"/>`;
+            this.DOM.el.insertBefore(this.DOM.svg, this.DOM.nav);
+            this.DOM.shape = this.DOM.svg.querySelector('path');
+        }
+        updateFrame() {
+            this.paths.initial = this.calculatePath('initial');
+            this.paths.final = this.calculatePath('final');
+            this.DOM.svg.setAttribute('viewbox',`0 0 ${this.rect.width} ${this.rect.height}`);
+            this.DOM.shape.setAttribute('d', this.isAnimating ? this.paths.final : this.paths.initial);
+        }
+        calculatePath(path = 'initial') {
+            return path === 'initial' ?
+                    `M 0,0 0,${this.rect.height} ${this.rect.width},${this.rect.height} ${this.rect.width},0 0,0 Z M 0,0 ${this.rect.width},0 ${this.rect.width},${this.rect.height} 0,${this.rect.height} Z` :
+                    `M 0,0 0,${this.rect.height} ${this.rect.width},${this.rect.height} ${this.rect.width},0 0,0 Z M ${this.frameSize},${this.frameSize} ${this.rect.width-this.frameSize},${this.frameSize} ${this.rect.width-this.frameSize},${this.rect.height-this.frameSize} ${this.frameSize},${this.rect.height-this.frameSize} Z`;
+        }
+        initEvents() {
+            this.DOM.nextCtrl.addEventListener('click', () => this.navigate('next'));
+            this.DOM.prevCtrl.addEventListener('click', () => this.navigate('prev'));
+//            this.DOM.to1Ctrl.addEventListener('click', () => this.navigate('to1'));
+//            this.DOM.to2Ctrl.addEventListener('click', () => this.navigate('to2'));
+//            this.DOM.to3Ctrl.addEventListener('click', () => this.navigate('to3'));
+//            this.DOM.to4Ctrl.addEventListener('click', () => this.navigate('to4'));
+            
+            window.addEventListener('resize', debounce(() => {
+                this.rect = this.DOM.el.getBoundingClientRect();
+                this.updateFrame();
+            }, 20));
+            
+            document.addEventListener('keydown', (ev) => {
+                const keyCode = ev.keyCode || ev.which;
+                if ( keyCode === 37 ) {
+                    this.navigate('prev');
+                }
+                else if ( keyCode === 39 ) {
+                    this.navigate('next');
+                }
+            });
+        }
+        navigate(dir = 'next') {
+            if ( this.isAnimating ) return false;
+            this.isAnimating = true;
 
-			.to("#slideContainer", 0.5, {z: -150})		
-			.to("#slideContainer", 1,   {x: "-25%"})	
-			.to("#slideContainer", 0.5, {z: 0})	
+            const animateShapeIn = anime({
+                targets: this.DOM.shape,
+                duration: this.settings.animation.shape.duration,
+                easing: this.settings.animation.shape.easing.in,
+                d: this.paths.final
+            });
 
-			.from(_0t1, 1, {y: -100,autoAlpha: 0})
-			.from(_0fp1, 1, {autoAlpha: 0},'-=0.5')
-			.from(_0fp2, 1, {autoAlpha: 0},'-=0.5')
-			.from(_0US, 1, {autoAlpha: 0})
-			.from(_0t2, 1, {y: -100,autoAlpha: 0})
-			.from(_0fp3, 1, {autoAlpha: 0},'-=0.5')
-			.from(_0fp4, 1, {autoAlpha: 0},'-=0.5')
-			.from(_0fp5, 1, {autoAlpha: 0},'-=0.5')
-			.from(_0arch, 1, {y: -100, autoAlpha: 0})
-			.from(_0t3, 1, {y: -100,autoAlpha: 0})
-			.from(_0fp6, 1, {autoAlpha: 0},'-=0.5')
-			.from(_0fp7, 1, {autoAlpha: 0},'-=0.5')
-			.from(_0fp8, 1, {autoAlpha: 0},'-=0.5')
-		
-			.from(_0library, 1, {autoAlpha: 0})
-			.from(_0wheel, 1, {autoAlpha: 0})
-		
-			.to("#slideContainer", 0.5, {z: -150, delay: 1})
-			.to("#slideContainer", 1,   {x: "-50%"})
-			.to("#slideContainer", 0.5, {z: 0})
+            const animateSlides = () => {
+                return new Promise((resolve, reject) => {
+                    const currentSlide = this.DOM.slides[this.current];
+                    anime({
+                        targets: currentSlide,
+                        duration: this.settings.animation.slides.duration,
+                        easing: this.settings.animation.slides.easing,
+                        translateX: dir === 'next' ? -1*this.rect.width : this.rect.width,
+                        complete: () => {
+                            currentSlide.classList.remove('slide--current');
+                            resolve();
+                        }
+                    });
+        
+                    this.current = dir === 'next' ? 
+                        this.current < this.slidesTotal-1 ? this.current + 1 : 0 :
+                        this.current > 0 ? this.current - 1 : this.slidesTotal-1; 
+                    
+                    const newSlide = this.DOM.slides[this.current];
+                    newSlide.classList.add('slide--current');
+                    anime({
+                        targets: newSlide,
+                        duration: this.settings.animation.slides.duration,
+                        easing: this.settings.animation.slides.easing,
+                        translateX: [dir === 'next' ? this.rect.width : -1*this.rect.width,0]
+                    });
+        
+                    const newSlideImg = newSlide.querySelector('.slide__img');
+                    anime.remove(newSlideImg);
+                    anime({
+                        targets: newSlideImg,
+                        duration: this.settings.animation.slides.duration*4,
+                        easing: this.settings.animation.slides.easing,
+                        translateX: [dir === 'next' ? 200 : -200, 0]
+                    });
+        
+                    anime({
+                        targets: [newSlide.querySelector('.slide__title'), newSlide.querySelector('.slide__desc')],
+                        duration: this.settings.animation.slides.duration*2,
+                        easing: this.settings.animation.slides.easing,
+                        delay: (t,i) => i*100+100,
+                        translateX: [dir === 'next' ? 300 : -300,0],
+                        opacity: [0,1]
+                    });
+                });
+            };
 
-			.from(_1t1, 1, {y: -100,autoAlpha: 0})
-			.from(_1maga, 1, {autoAlpha: 0})	
-			.from(_1fp1, 1, {autoAlpha: 0},'-=0.5')
-			.from(_1fp2, 1, {autoAlpha: 0},'-=0.5')
-			.from(_1fp3, 1, {autoAlpha: 0},'-=0.5')
-			.from(_1t2, 1, {y: -100,autoAlpha: 0})
-			.from(_1fp4, 1, {autoAlpha: 0},'-=0.5')
-			.from(_1fp5, 1, {autoAlpha: 0},'-=0.5')
-			.from(_1fp6, 1, {autoAlpha: 0},'-=0.5')
-			.from(_1t3, 1, {y: -100,autoAlpha: 0})
-			.from(_1bevo, 1, {autoAlpha: 0})
-			.from(_1fp7, 1, {autoAlpha: 0},'-=0.2')
-			.from(_1fp8, 1, {autoAlpha: 0},'-=0.2')
-			.from(_1fp9, 1, {autoAlpha: 0},'-=0.2')
-			.from(_1fp10, 1, {autoAlpha: 0},'-=0.2')
-			.from(_1fp11, 1, {autoAlpha: 0},'-=0.2')
-			.from(_1fp12, 1, {autoAlpha: 0},'-=0.2')
-		
-			.from(_1wall, 1, {autoAlpha: 0})
-			.to(_1hs, 1, {autoAlpha: 0})
-			.from(_1tower, 1, {autoAlpha: 0})
-		
-			.from(_1plane, 1, {autoAlpha: 0})
-			.to(_1plane, 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut})
-			.to(_1plane, 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut})
-			.to(_1plane, 1, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut})
-	
-			.to("#slideContainer", 0.5, {z: -150, delay: 1})
-			.to("#slideContainer", 1,   {x: "-75%"})
-			.to("#slideContainer", 0.5, {z: 0})
+            const animateShapeOut = () => {
+                anime({
+                    targets: this.DOM.shape,
+                    duration: this.settings.animation.shape.duration,
+                    delay: 150,
+                    easing: this.settings.animation.shape.easing.out,
+                    d: this.paths.initial,
+                    complete: () => this.isAnimating = false
+                });
+            }
 
-			.from(_2t1, 1, {y: -100,autoAlpha: 0})
-			.from(_2Japan, 1, {autoAlpha: 0})
-			.from(_2fp1, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2fp2, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2t2, 1, {y: -100,autoAlpha: 0})
-			.from(_2fp3, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2fp4, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2casper, 1, {autoAlpha: 0})
-			.from(_2cp1, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2cp2, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2fp5, 1, {autoAlpha: 0},'-=0.5')	
-			.from(_2cp3, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2cp4, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2t3, 1, {y: -100,autoAlpha: 0})
-			.from(_2marry, 1, {autoAlpha: 0})
-			.from(_2fp6, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2cp5, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2fp7, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2cp6, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2cp7, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2fp8, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2t4, 1, {y: -100,autoAlpha: 0})	
-			.from(_2cp8, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2cp9, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2cp10, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2media, 1, {autoAlpha: 0})
-			.from(_2fp9, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2fp10, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2cp11, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2cp12, 1, {autoAlpha: 0},'-=0.5')
-			.from(_2cp13, 1, {autoAlpha: 0},'-=0.5');
+            animateShapeIn.finished.then(animateSlides).then(animateShapeOut);
+        }
+    };
 
-		var scene = new ScrollMagic.Scene({
-				triggerElement: "#pinContainer",
-				triggerHook: "onLeave",
-				duration: "400%"
-			})
-			.setPin("#pinContainer")
-			.setTween(slides)
-			.addTo(controller);
-	});
+    var slide = new Slideshow(document.querySelector('.slideshow'));
+    imagesLoaded('.slide__img', { background: true }, () => document.body.classList.remove('loading'));
+	setInterval(function(){slide.navigate("next")},10000);
+};

@@ -5,6 +5,8 @@ html {
 body{
 	font-family: 'Montserrat', sans-serif;
 	position: relative;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 img {
 	margin: 12px 0px;
@@ -21,7 +23,6 @@ a, p, li, label {
 	text-align: justify;
 	color: #000000;
 }
-
 header {
 	margin: 36px 0px;
 }
@@ -98,10 +99,17 @@ ul {
 	height: 25px;
 	line-height: 25px;
 }
+#topbar-menu .active {
+	text-shadow:1px 1px 1px #ffbea5;
+}
 #topbar-menu .nav-link {
 	padding: 0 7px;
 	margin: 0px 20px;
 }
+#topbar-menu .nav-link:hover{
+	color: #FBAE4B;
+}
+
 #topbar-menu .navbar-toggler-icon {
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#F37343' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }

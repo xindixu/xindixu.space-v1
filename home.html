@@ -15,57 +15,141 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href="custom.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="js/main.js" type="text/javascript"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115061046-1"></script>
+<script src="js/main.js" type="text/javascript"></script>
+
+<!-- Slideshow -->
+<link rel="stylesheet" type="text/css" href="base.css" />
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  gtag('config', 'UA-115061046-1');
-</script>
-
+		gtag('config', 'UA-115061046-1');
+	</script>
+<style>
+#wrap {
+}
+.svg-wrapper {
+	display: inline-block;
+	width: 80px;
+	height: 60px;
+}
+svg {
+	width: 100%;
+	height: 100%;
+}
+.path {
+	stroke-dasharray: 500;
+	stroke-dashoffset: 1000;
+	animation: dash 3s linear alternate infinite;
+}
+ @keyframes dash {
+ from {
+ stroke-dashoffset: 1000;
+}
+ to {
+ stroke-dashoffset: 0;
+}
+}
+</style>
 <title>Xindi: Welcome!</title>
-	
+<!--style>
+div, svg{
+	background: #EAC8C8;
+	border: 2px dashed #5A9DDD;
+}
+</style-->
 </head>
 
 <body>
-<header>
-	<div class="text-center"> <a href="about.html"><img class="img-fluid" src="image/logo1.png" alt="logo" width="400"/></a></div>
-</header>
 <nav class="navbar navbar-expand-sm sticky-top" id="topbar-menu">
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 	<div class="collapse navbar-collapse" id="mainNavBar">
 		<ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
-			<li class="nav-item"> <a class="nav-link" href="home.html">Home</a></li>
+			<li class="nav-item"> <a class="nav-link active" href="home.html">Home</a></li>
 			<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 			<!-- Dropdown -->
-			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Portfolio </a>
+			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Portfolio</a>
 				<div class="dropdown-menu"> <a class="dropdown-item" href="advertising.html">Advertising</a> <a class="dropdown-item" href="computer-science.html">Computer Science</a> <a class="dropdown-item" href="crafts.html">Crafts</a><a class="dropdown-item" href="digital-media-production.html">Digital Media Production</a> </div>
 			</li>
+			<li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
 			<li class="nav-item"><a class="nav-link" href="cat.html">Cat</a></li>
 			<li class="nav-item"><a class="nav-link" href="contact.html">Contact </a></li>
 		</ul>
 	</div>
 </nav>
-	
-	<div class="container col-md-10 col-lg-8 justify-content-center">
-	<h1>My Life So Far</h1>
-	<div class="text-center"> 	<a href="life-story.html" target="_blank"><img class="img-fluid" src="image/home/life.png" width="100%"/> </a></div>
-	<p>Know a little more about me...</p>
-	<a href="life-story.html" target="_blank" class="btn btn-outline-primary">Launch in new tab</a>
-		
-	
-	<footer>
-		<div class="text-center">
-			<ul class="list-unstyled list-inline">
-				<li class="list-inline-item"><a href="https://www.linkedin.com/in/xindi-xu/"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a></li>
-				<li class="list-inline-item"><a href="https://github.com/xindixu"><i class="fa fa-github" style="font-size:24px"></i></a></li>
-				<li class="list-inline-item"><a href="https://www.youtube.com/channel/UCWnA13M9WCIXbl9yl4qs6_Q"> <i class="fa fa-youtube-play" style="font-size:24px"></i></a></li>
-			</ul>
-			<p>The University of Texas At Austin&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Austin, TX, 78705, USA&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:512-775-1736">+1 (512)775-1736</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:xindixu@utexas.edu">xindixu@utexas.edu</a></p>
+<div id="sl" class="slideshow">
+	<div class="slides">
+		<div class="slide slide--current">
+			<div class="slide__img" style="background-color:#F5D2D3"></div>
+			<h2 class="slide__title">Hi, I'm Xindi!</h2>
+			<p class="slide__desc">I'm an advertiser and programmer, focusing on digital marketing. I'm an honor student at UT Austin. I'm the best human friend of my cat Casper.</p>
 		</div>
-	</footer>
-	</body>
-	
+		<div class="slide">
+			<div class="slide__img" style="background-color:#E4B4AB"></div>
+			<h2 class="slide__title">Multi-Discipline</h2>
+			<p class="slide__desc">Being multi-discipline is part of my ethos. Whether it's analysis, design, development, production, I'm here!</p>
+		</div>
+		<div class="slide">
+			<div class="slide__img" style="background-color:#FBC7B0"></div>
+			<h2 class="slide__title">Digital Media </h2>
+			<p class="slide__desc">I love online media because it's a place where everyone could interact with one another and no two conversations are the same. </p>
+		</div>
+		<div class="slide">
+			<div class="slide__img" style="background-color:#E4BA95"></div>
+			<h2 class="slide__title">Consumer-centric</h2>
+			<p class="slide__desc">I am striving for more friendly connections with everyone, showing him/her the most relevant information in the most innovative ways. </p>
+		</div>
+	</div>
+	<nav class="slidenav">
+		<button class="slidenav__item slidenav__item--prev"><i class="material-icons">navigate_before</i></button>
+		<button class="slidenav__item slidenav__item--1"><i class="fa fa-circle-o"></i></button>
+		<button class="slidenav__item slidenav__item--2"><i class="fa fa-circle-o"></i></button>
+		<button class="slidenav__item slidenav__item--3"><i class="fa fa-circle-o"></i></button>
+		<button class="slidenav__item slidenav__item--4"><i class="fa fa-circle-o"></i></button>
+		<button class="slidenav__item slidenav__item--next"><i class="material-icons">navigate_next</i></button>
+	</nav>
+</div>
+<div class="container col-10">
+	<h2 class="pt-2 mt-5">I can help you with...</h2>
+	<div class="row pt-2" id="help">
+		<div class="col-md">
+			<div class="text-center"><img src="image/home/web.svg"></div>
+			<h3>Web Development</h3>
+			<p>Web presence has become a core of business success. Let's build a fantastic website together. Whether you want to rely on CMS, such as Squarespace &amp; WordPress.</p>
+		</div>
+		<div class="col-md">
+			<div class="text-center"><img src="image/home/analysis.svg"></div>
+			<h3>Research &amp; Analysis</h3>
+		</div>
+		<div class="col-md">
+			<div class="text-center"><img src="image/home/visual.svg"></div>
+			<h3>Visual Design</h3>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="text-center">
+		<ul class="list-unstyled list-inline">
+			<li class="list-inline-item"><a href="https://www.linkedin.com/in/xindi-xu/"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a></li>
+			<li class="list-inline-item"><a href="https://github.com/xindixu"><i class="fa fa-github" style="font-size:24px"></i></a></li>
+			<li class="list-inline-item"><a href="https://www.youtube.com/channel/UCWnA13M9WCIXbl9yl4qs6_Q"> <i class="fa fa-youtube-play" style="font-size:24px"></i></a></li>
+		</ul>
+		<p>The University of Texas At Austin&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Austin, TX, 78705, USA&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:512-775-1736">+1 (512)775-1736</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:xindixu@utexas.edu">xindixu@utexas.edu</a></p>
+	</div>
+</footer>
+<script src="js/imagesloaded.pkgd.min.js"></script> 
+<script src="js/anime.min.js"></script> 
+<script src="js/home.js"></script> 
+<script>
+    // Changing the defaults
+    window.sr = ScrollReveal({ reset: true });
+    sr.reveal('#sl',{reset: false});
+	sr.reveal('#help',{ duration: 2000, reset: false });
+</script>
+</body>
+</html>
