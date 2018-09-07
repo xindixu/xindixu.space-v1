@@ -8,15 +8,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<link href="main.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
 
 <!-- Custome -->
 <link rel="shortcut icon" href="image/logo3.png" type="image/x-icon" />
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<link href="custom.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="js/main.js" type="text/javascript"></script>
-	    
+
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <!-- Google Analytics -->
@@ -27,12 +27,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-115061046-1', 'auto');
-    
-<?php
-    if( isset( $_COOKIE['user_is_admin'] ) ) {
-        echo 'ga(\'set\', \'dimension1\', \'true\');';
-    }
-?>
 var dimensionValue = 'User is Admin';
 ga('set', 'dimension1', dimensionValue);
 ga('send', 'pageview');
@@ -45,7 +39,7 @@ ga('send', 'pageview');
 <header>
 	<div class="text-center"> <a href="about.html"><img class="img-fluid" src="image/logo1.png" alt="logo" width="400"/></a></div>
 </header>
-<nav class="navbar navbar-expand-sm sticky-top" id="topbar-menu">
+<nav class="navbar navbar-expand-md sticky-top" id="topbar-menu">
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 	<div class="collapse navbar-collapse" id="mainNavBar">
 		<ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
@@ -55,6 +49,7 @@ ga('send', 'pageview');
 			<li class="nav-item dropdown"> <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Portfolio </a>
 				<div class="dropdown-menu"> <a class="dropdown-item" href="advertising.html">Advertising</a> <a class="dropdown-item" href="computer-science.html">Computer Science</a> <a class="dropdown-item" href="crafts.html">Crafts</a><a class="dropdown-item" href="digital-media-production.html">Digital Media Production</a> </div>
 			</li>
+			<li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
 			<li class="nav-item"><a class="nav-link" href="cat.html">Cat</a></li>
 			<li class="nav-item"><a class="nav-link" href="contact.html">Contact </a></li>
 		</ul>
@@ -71,7 +66,7 @@ ga('send', 'pageview');
 		<div class="card-deck">
 			<div class="card mb-4"> <a><img src="image/digital/static.png" class="card-img-top"></a>
 				<div class="card-body">
-					<h3 class="card-title">Static</h3>
+					<h3 class="card-title">Static&nbsp;<span class="badge badge-dark badge-pill">Under Construction</span></h3>
 					<h5 class="card-subtitle mb-2 text-muted">Graphics, UI, Logo, Print</h5>
 					<a href="#" class="btn btn-outline-primary disabled">Learn more</a></div>
 			</div>

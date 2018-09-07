@@ -174,10 +174,7 @@ img {
   border-style: none; }
 
 svg:not(:root) {
-	overflow: hidden;
-	-webkit-box-shadow: inset 0px 0px;
-	box-shadow: inset 0px 0px;
-}
+  overflow: hidden; }
 
 table {
   border-collapse: collapse; }

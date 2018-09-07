@@ -8,28 +8,33 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<link href="main.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
 
 <!-- Custome -->
 <link rel="shortcut icon" href="image/logo3.png" type="image/x-icon" />
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<link href="custom.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115061046-1"></script>
 <script src="js/main.js" type="text/javascript"></script>
 
-<!-- Slideshow -->
-<link rel="stylesheet" type="text/css" href="base.css" />
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google Analytics -->
 <script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		gtag('config', 'UA-115061046-1');
-	</script>
+ga('create', 'UA-115061046-1', 'auto');
+var dimensionValue = 'User is Admin';
+ga('set', 'dimension1', dimensionValue);
+ga('send', 'pageview');
+</script>
+
+<!-- Slideshow -->
+<link rel="stylesheet" type="text/css" href="css/slider.css"/>
+
 <style>
 #wrap {
 }
@@ -55,6 +60,9 @@ svg {
  stroke-dashoffset: 0;
 }
 }
+#stats img {
+	width: 50px;
+}
 </style>
 <title>Xindi: Welcome!</title>
 <!--style>
@@ -66,7 +74,10 @@ div, svg{
 </head>
 
 <body>
-<nav class="navbar navbar-expand-sm sticky-top" id="topbar-menu">
+	<header>
+		<div class="text-center"> <a href="about.html"><img class="img-fluid" src="image/logo1.png" alt="logo" width="400"/></a></div>
+	</header>
+<nav class="navbar navbar-expand-md sticky-top" id="topbar-menu">
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 	<div class="collapse navbar-collapse" id="mainNavBar">
 		<ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
@@ -106,12 +117,12 @@ div, svg{
 		</div>
 	</div>
 	<nav class="slidenav">
-		<button class="slidenav__item slidenav__item--prev"><i class="material-icons">navigate_before</i></button>
+		<button class="slidenav__item slidenav__item--prev"><i class="fa fa-chevron-left"></i></button>
 		<button class="slidenav__item slidenav__item--1"><i class="fa fa-circle-o"></i></button>
 		<button class="slidenav__item slidenav__item--2"><i class="fa fa-circle-o"></i></button>
 		<button class="slidenav__item slidenav__item--3"><i class="fa fa-circle-o"></i></button>
 		<button class="slidenav__item slidenav__item--4"><i class="fa fa-circle-o"></i></button>
-		<button class="slidenav__item slidenav__item--next"><i class="material-icons">navigate_next</i></button>
+		<button class="slidenav__item slidenav__item--next"><i class="fa fa-chevron-right"></i></button>
 	</nav>
 </div>
 <div class="container col-10">
@@ -120,17 +131,82 @@ div, svg{
 		<div class="col-md">
 			<div class="text-center"><img src="image/home/web.svg"></div>
 			<h3>Web Development</h3>
-			<p>Web presence has become a core of business success. Let's build a fantastic website together. Whether you want to rely on CMS, such as Squarespace &amp; WordPress.</p>
+			<p>Establishing web presence contributes a lot to the success of your business. Let's build a <b>stunning website together</b>! Whether it is <b>CMS</b>, easier for future updates, or it is one with pure <b>HTML, CSS, and JS</b>, I am here to help! </p>
 		</div>
 		<div class="col-md">
 			<div class="text-center"><img src="image/home/analysis.svg"></div>
-			<h3>Research &amp; Analysis</h3>
+			<h3>Research &amp; Planning</h3>
+			<p><b>Research</b> is the cornerstone of any effective marketing strategy. However, data gathered from research are just raw facts without further meaning. Let me help you translate them into insights that <b>drive better decisions</b>. </p>
 		</div>
 		<div class="col-md">
 			<div class="text-center"><img src="image/home/visual.svg"></div>
 			<h3>Visual Design</h3>
+			<p>Got an amazing idea, but don't know how to execute it? No worries! From <b>graphic designs</b> to <b>video production</b>, from <b>computer graphics</b> to <b>online web games</b>, I will help you <b>get your idea across</b> with compelling contents. </p>
 		</div>
 	</div>
+	<div class="row pt-2" id="stats">
+		<div class="col-md">
+			<div class="text-center"><img src="image/home/code.svg"></div>
+			<p>Lines of code written: <span class="h3" id="code"></span></p>
+			<div class="text-center navi cl-effect-1"> <a href="computer-science.html">take a look</a> </div>
+		</div>
+		<div class="col-md">
+			<div class="text-center"><img src="image/home/project.svg"></div>
+			<p>Numbers of ad projects done: <span class="h3" id="ad"></span></p>
+			<div class="text-center navi cl-effect-1"> <a href="advertising.html">take a look</a> </div>
+		</div>
+		<div class="col-md">
+			<div class="text-center"><img src="image/home/graphic.svg"></div>
+			<p>Numbers of visuals created: <span class="h3" id="visual"></span></p>
+			<div class="text-center navi cl-effect-1"> <a href="digital-media-production.html">take a look</a> </div>
+		</div>
+	</div>
+	<div class="row pt-2">
+		<div id="contact" class="col-lg-8">
+			<article class="intro">
+				<h2>Get in Touch!</h2>
+				<section class="slogan">
+					<p>Please feel free to email me at: <a href="mailto:xindixu@utexas.edu">xindixu@utexas.edu</a>. Or call me at: <a href="tel:512-775-1736">+1 (512)775-1736</a></p>
+					<p>You could also fill in the form below. I will email you back within 24hr.🙂😀😃😄😁</p>
+				</section>
+			</article>
+			<article class="form">
+				<form>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="inputEmail">Email</label>
+							<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="inputName">Name</label>
+							<input type="name" class="form-control" id="inputName" placeholder="Name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputSubject">Subject</label>
+						<input type="text" class="form-control" id="inputSubject" placeholder="Hello, I love your website!">
+					</div>
+					<div class="form-group">
+						<label for="inputMessage">Message</label>
+						<textarea class="form-control" id="inputMessage" rows="3"></textarea>
+					</div>
+					<button type="submit" class="btn btn-outline-primary">Submit</button>
+				</form>
+			</article>
+		</div>
+		<div id="links" class="navi col-lg-4">
+		<h2>Explore more...</h2>
+		<ul class="list-unstyled cl-effect-1">
+			<li><a href="about.html">About</a></li>
+			<li><a href="advertising.html">Advertising </a> </li>
+			<li><a href="computer-science.html">Computer Science</a> </li>
+			<li><a href="crafts.html">Crafts</a> </li>
+			<li><a href="digital-media-production.html">Digital Media Production</a> </li>
+			<li><a href="resume.html">Resume</a></li>
+			<li><a href="cat.html">Cat</a> </li>
+		</ul>
+	</div>
+</div>
 </div>
 <footer>
 	<div class="text-center">
@@ -142,14 +218,25 @@ div, svg{
 		<p>The University of Texas At Austin&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Austin, TX, 78705, USA&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:512-775-1736">+1 (512)775-1736</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:xindixu@utexas.edu">xindixu@utexas.edu</a></p>
 	</div>
 </footer>
-<script src="js/imagesloaded.pkgd.min.js"></script> 
-<script src="js/anime.min.js"></script> 
-<script src="js/home.js"></script> 
+<script src="js/vendor/imagesloaded.pkgd.min.js"></script>
+<script src="js/vendor/anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/1.6.2/kute.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/1.6.2/kute-text.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/1.6.2/kute-jquery.min.js"></script>
+<script src="js/home.js"></script>
 <script>
     // Changing the defaults
     window.sr = ScrollReveal({ reset: true });
     sr.reveal('#sl',{reset: false});
 	sr.reveal('#help',{ duration: 2000, reset: false });
+	sr.reveal('#stats',{ duration: 2000, reset: false, afterReveal: function(){
+		KUTE.to('#code', {number: 72425}).start(),
+		KUTE.to('#ad', {number: 4}).start(),
+		KUTE.to('#visual', {number: 62}).start()
+	}});
+	sr.reveal('#contact',{ duration: 1000, reset: false });
+	sr.reveal('#links li',{ duration: 1500, reset: false },30);
+
 </script>
 </body>
 </html>

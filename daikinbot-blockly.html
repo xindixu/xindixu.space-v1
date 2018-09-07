@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<link href="css/main.css" rel="stylesheet" type="text/css">
+
+<script src="js/vendor/blockly/blockly_compressed.js"></script>
+<script src="js/vendor/blockly/javascript_compressed.js"></script>
+<script src="js/vendor/blockly/blocks_compressed.js"></script>
+<script src="js/vendor/blockly/en.js"></script>
+
+<script src="js/vendor/blockly/block_definition.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<style>
+.visual{
+  position: relative;
+ 
+}
+.console{
+  position: relative;
+  height: 20px; 
+  width: 800px;
+  background-color: #f1f1f1;
+}
+.desinated_area{
+  position: relative;
+  height: 250px; 
+  width: 400px;
+  background-color: #c4e0ff;
+}
+.sorting_area{
+  position: relative;
+  height: 250px; 
+  width: 400px;
+  background-color: #afd4ff;
+}
+.belt{
+  position: relative;
+  height: 40px; 
+  width: 800px;
+  background-color: #91c4ff;
+}
+.parts {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.motor{
+  background-color: black;
+}
+.blade{
+  background-color: blue;
+}
+.unit{
+  background-color: red;
+}
+#blocklyDiv{
+  position: relative;
+  width: 800px;
+  height: 250px; 
+}
+
+</style>
+<title>Dobot</title>
+</head>
+
+<body>
+
+  
+
+  <div class="visual mx-4 my-2">
+    <div class="row">
+      <div class="desinated_area"></div>
+      <div class="sorting_area "></div>
+    </div>
+    <div class="row">
+      <div class="belt"></div>
+    </div>
+
+    <div class="console row my-2"></div>
+  </div>
+
+<!-- ===========   Blockly workspace ==========   -->
+  <div id="blocklyDiv" class="mx-2"></div>
+
+
+<xml xmlns="http://www.w3.org/1999/xhtml" id="toolbox" style="display: none;">
+  <category name="Custom" colour="#5ba56d">
+    <block type="generate"></block>
+    <block type="math_number">
+      <field name="NUM">0</field>
+    </block>
+    <block type="colorsort"></block>
+    <block type="putonbelt"></block>
+    <block type="colorscan"></block>
+    <block type="controls_for">
+      <field name="VAR" id="16+qH3`TZ+2E5o_XeQ31" variabletype="">i</field>
+      <value name="FROM">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="TO">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+      <value name="BY">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+  </category>
+  <category name="Variables" colour="#A65C81" custom="VARIABLE"></category>
+</xml>
+
+
+<div class="buttons mx-2">
+  <p class="my-2">
+    <button onclick="showCode()">Show JavaScript</button>
+    <button onclick="runCode()">Run JavaScript</button>
+  </p>
+ <p>
+  Step 1 <button class="disb" onclick="setup(5,3)">Set up 5 rows, 3 cols</button> Set up: generate parts, randomize them and put them on grid, set dobot to home position
+  </p>
+
+  <p>
+  Step 2 <button class="disb" onclick="getColor(1,2)">getColor of row 1, col 2</button> 
+  </p>
+  <p>
+  Step 3 <button class="disb" onclick="colorSort()">Color Sort</button> Pick up one part, scan, put to right place
+  </p>
+
+  <p>
+  Step 4 <button class="disb" onclick="putOnBelt()">Put on the Belt</button> Pick up parts from col 1 - 3 by turn, put on conveyor belt
+  </p>
+</div>
+
+<script type="text/javascript">
+var row,col;
+var allparts = [], units = [], blades = [], motors = [];
+var partlist = ["unit","blade","motor"];
+var dobot;
+
+class Parts{
+  constructor(type){
+    this.type = type;
+
+    if(this.type == "unit"){
+      this.color = "red";
+    }
+    else if(this.type == "blade"){
+      this.color = "blue";
+    }
+    else if(this.type == "motor"){
+      this.color = "black";
+    }
+
+    if(this.type == "unit"){
+      this.order = 1;
+    }
+    else if(this.type == "blade"){
+      this.order = 2;
+    }
+    else if(this.type == "motor"){
+      this.order = 3;
+    }
+  }
+  setpos(x,y){
+    this.x = x;
+    this.y = y;
+  }
+  getx(){
+    return this.x;
+  }
+  gety(){
+    return this.y;
+  }
+}
+
+class Dobot{
+  constructor(){
+    this.x = 10; 
+    this.y = 10;
+  }
+  setpos(x,y){
+    this.x = x;
+    this.y = y;
+  }
+}
+
+function setup(row,col){
+  this.row = row;
+  this.col = col;
+  dobot = new Dobot();
+  var num = col*row
+  for(var i = 0; i < num; i++){
+    allparts.push(new Parts(partlist[i%3]));
+  }
+  allparts.sort(function(a, b){return 0.5 - Math.random()});
+  //set starting position
+  var t = 0;
+  for(var i = 0; i < row; i++){
+    for(var j = 0; j < col; j++){
+    allparts[t].setpos(50*j,50*i);
+    t++;
+    }
+  }
+  for(var i = 0; i < num; i++){
+    var p = allparts[i];
+    var d = "<div class=parts " + String(p.type) + " style=" + "left:" + String(p.x) + "px;top:" + String(p.y) +"px;background-color:"+p.color+"></div>"
+    $(d).appendTo(".desinated_area");
+  }
+
+  $("<p id='dobot' style=" + "left:" + String(dobot.x) + "px;top:" + String(dobot.y) +"px;><p>").appendTo(".desinated_area");
+
+}
+
+
+function getColor(r,c){
+  var index = (r-1)*this.col+(c-1);
+  var log = "<p>Color: "+allparts[index].color+"</p>";
+  $(log).appendTo(".console");
+}
+
+function colorSort(){
+  var num = allparts.length;
+  for(var i = 0; i < num; i++){
+    var t = allparts[i];
+    var c = t.color;
+    if(c == "red"){
+      units.push(t);
+      t.setpos(0,50*units.length-50);
+    } 
+    else if(c == "blue"){
+      blades.push(t);
+      t.setpos(50,50*blades.length-50);
+    } 
+    else if(c == "black"){
+      motors.push(t);
+      t.setpos(100,50*motors.length-50);
+    } 
+  }
+    allparts = units.concat(blades,motors); 
+    console.log(allparts);
+    $(".desinated_area").empty();
+
+  for(var i = 0; i < num; i++){
+    var p = allparts[i];
+    var d = "<div class=parts " + String(p.type) + " style=" + "left:" + String(p.x) + "px;top:" + String(p.y) +"px;background-color:"+p.color+"></div>"
+    $(d).appendTo(".sorting_area");
+  }
+  
+}
+
+function putOnBelt(){
+	var nx = 0;
+	var ny = 0;
+	var num = this.row*this.col;
+	
+	for(var i = 0; i < num; i++){
+		var p;
+		if(i%3 == 2){
+		  p = units.pop();
+		}
+		if(i%3 == 1){
+		  p = blades.pop();
+		}
+		if(i%3 == 0){
+		  p = motors.pop();
+		}
+		p.x = nx;
+		p.y = ny;
+		nx += 50;
+	}
+  console.log(allparts);
+   $(".sorting_area").empty();
+
+  for(var i = 0; i < num; i++){
+    var p = allparts[i];
+    var d = "<div class=parts " + String(p.type) + " style=" + "left:" + String(p.x) + "px;top:" + String(p.y) +"px;background-color:"+p.color+"></div>"
+    $(d).appendTo(".belt");
+  }
+}
+</script>
+
+<script>
+	/* TODO: Change toolbox XML ID if necessary. Can export toolbox XML from Workspace Factory. */
+var toolbox = document.getElementById("toolbox");
+
+var options = { 
+	toolbox : toolbox, 
+	collapse : true, 
+	comments : true, 
+	disable : true, 
+	maxBlocks : Infinity, 
+	trashcan : true, 
+	horizontalLayout : false, 
+	toolboxPosition : 'start', 
+	css : true, 
+	media : 'https://blockly-demo.appspot.com/static/media/', 
+	rtl : false, 
+	scrollbars : true, 
+	sounds : true, 
+	oneBasedIndex : true, 
+	grid : {
+		spacing : 20, 
+		length : 1, 
+		colour : '#888', 
+		snap : true
+	}
+};
+
+/* Inject your workspace */ 
+var workspace = Blockly.inject("blocklyDiv", options);
+
+/* Load Workspace Blocks from XML to workspace. Remove all code below if no blocks to load */
+
+/* TODO: Change workspace blocks XML ID if necessary. Can export workspace blocks XML from Workspace Factory. */
+var workspaceBlocks = document.getElementById("workspaceBlocks"); 
+
+    function showCode() {
+      // Generate JavaScript code and display it.
+      Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
+      var code = Blockly.JavaScript.workspaceToCode(workspace);
+      alert(code);
+    }
+
+    function runCode() {
+      // Generate JavaScript code and run it.
+      window.LoopTrap = 1000;
+      Blockly.JavaScript.INFINITE_LOOP_TRAP =
+          'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
+      var code = Blockly.JavaScript.workspaceToCode(workspace);
+      Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
+      try {
+        eval(code);
+      } catch (e) {
+        alert(e);
+      }
+    }
+
+</script>
+
+<script>
+$('.disb').click(function(){ 
+    $(this).attr("disabled","disabled");
+});
+</script>
+
+</body>
+</html>
+

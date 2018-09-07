@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio</title>
+
+<!-- Bootstrap -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+
+<!-- Custome -->
+<link rel="shortcut icon" href="image/logo3.png" type="image/x-icon" />
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,500,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/portfolio.css" />
+<link rel="stylesheet" type="text/css" href="css/pater.css" />
+	
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script>document.documentElement.className = 'js';</script>
+<script src="js/main.js" type="text/javascript"></script>
+	
+	
+	<!--style>
+div {
+	background: #FEE7E8;
+	border: 2px dashed #5A9DDD;
+}
+	svg{
+		
+	border: 2px dashed #000000;
+	}
+
+	</style-->
+</head>
+	
+	
+	
+	
+<body class="loading">
+<header>
+	<div class="text-center"> <a href="about.html"><img class="img-fluid" src="image/logo1.png" alt="logo" width="400"/></a></div>
+</header>
+<nav class="navbar navbar-expand-md sticky-top" id="topbar-menu">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+	<div class="collapse navbar-collapse" id="mainNavBar">
+		<ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
+			<li class="nav-item"> <a class="nav-link" href="home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+			<!-- Dropdown -->
+			<li class="nav-item dropdown"> <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Portfolio </a>
+				<div class="dropdown-menu"> <a class="dropdown-item" href="advertising.html">Advertising</a> <a class="dropdown-item" href="computer-science.html">Computer Science</a> <a class="dropdown-item" href="crafts.html">Crafts</a><a class="dropdown-item" href="digital-media-production.html">Digital Media Production</a> </div>
+			</li>
+			<li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+			<li class="nav-item"><a class="nav-link" href="cat.html">Cat</a></li>
+			<li class="nav-item"><a class="nav-link" href="contact.html">Contact </a></li>
+		</ul>
+	</div>
+</nav>
+<main class="mt-3">
+	<div class="content content--side">
+		<div class="control control--grids">
+			<div id="all" class="control__item">
+				<input class="control__radio" type="radio" name="grid-type" value="grid--all" checked>
+				<label class="control__label" for="all">All</label>
+			</div>
+			<div id="ad" class="control__item">
+				<input class="control__radio" type="radio" name="grid-type" value="grid--ad" checked>
+				<label class="control__label" for="ad">Advertising</label>
+			</div>
+			<div class="control__item">
+				<input class="control__radio" type="radio" name="grid-type" value="grid--mkt">
+				<label class="control__label" for="mkt">Marketing</label>
+			</div>
+			<div class="control__item">
+				<input class="control__radio" type="radio" name="grid-type" value="grid--cs">
+				<label class="control__label" for="cs">Computer Science</label>
+			</div>
+			<div class="control__item">
+				<input class="control__radio" type="radio" name="grid-type" value="grid--cft">
+				<label class="control__label" for="cft">Crafts</label>
+			</div>
+			<div class="control__item">
+				<input class="control__radio" type="radio" name="grid-type" value="grid--vis">
+				<label class="control__label" for="vis">Digital Media Production</label>
+			</div>
+		</div>
+	</div>
+	<div class="content content--side content--right">
+		<div class="control control--effects" style="display:none"> <span class="control__title">run effect</span>
+			<button id="run" class="control__btn" data-fx="Satet">Satet</button>
+		</div>
+	</div>
+	<div class="content content--center">
+
+		<div class="grid grid--all">
+			<div class="grid__sizer"></div>
+			<div class="grid__item project"> 
+				<a class="grid__img" href="groovy-automotive.html">
+				<figure>
+					<img src="image/portfolio/img/set1/groovy0.png">
+					<figcaption>
+						<h3>Groovy Automotive</h3>
+						<span>Media Strategy</span>
+					</figcaption>
+				</figure>
+				</a> 
+			</div>
+			<div class="grid__item project"> 
+				<a class="grid__img" href="inspiro-fest.html">
+				<figure>
+					<img src="image/portfolio/img/set1/inspiro0.png">
+					<figcaption>
+						<h3>Insprio Fest</h3>
+						<span>Creative Execution</span>
+					</figcaption>
+				</figure>
+				</a> 
+			</div>
+			<div class="grid__item project"> 
+					<a class="grid__img" href="chemistry-monopoly.html">
+					<figure>
+						<img src="image/portfolio/img/set3/ch0.jpg">
+						<figcaption>
+							<h3>Chemistry Monopoly</h3>
+							<span>Original Web Game</span>
+						</figcaption>
+					</figure>
+					</a> 
+				</div>
+			<div class="grid__item project"> 
+				<a class="grid__img" href="tesla.html">
+				<figure>
+					<img src="image/portfolio/img/set1/tesla0.png">
+					<figcaption>
+						<h3>Next Thing You Charge</h3>
+						<span>Advertising Campaign & Execution</span>
+					</figcaption>
+				</figure>
+				</a> 
+			</div>
+			<div class="grid__item project"> 
+				<a class="grid__img" href="teo.html">
+				<figure>
+					<img src="image/portfolio/img/set1/teo0.png">
+					<figcaption>
+						<h3>Be with Your Friends, and Tèo</h3>
+						<span>Brand Essence</span>
+					</figcaption>
+				</figure>
+				</a> 
+			</div>
+
+				<div class="grid__item project"> 
+					<a class="grid__img" href="look-for-UT.html">
+					<figure>
+						<img src="image/portfolio/img/set3/lk0.png">
+						<figcaption>
+							<h3>Look for UT</h3>
+							<span>iOS App</span>
+						</figcaption>
+					</figure>
+					</a> 
+				</div>
+						<div class="grid__item project"> 
+					<a class="grid__img" href="processing.html">
+					<figure>
+						<img src="image/portfolio/img/set3/pr0.png">
+						<figcaption>
+							<h3>Computor Graphics</h3>
+							<span>Processing</span>
+						</figcaption>
+					</figure>
+					</a> 
+				</div>
+				<div class="grid__item project"> 
+					<a class="grid__img" href="defend-the-throne.html">
+					<figure>
+						<img src="image/portfolio/img/set3/th0.png">
+						<figcaption>
+							<h3>Defend the Throne</h3>
+							<span>HTML Web Game</span>
+						</figcaption>
+					</figure>
+					</a> 
+				</div>
+		<div class="grid grid--ad">
+			<div class="grid__sizer"></div>
+		<!--======groovy=======-->
+			<div class="grid__item"> <img class="grid__img" src="image/portfolio/img/set1/groovy1.jpg"/></div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/groovy2.jpg"/> </div>
+			<div class="grid__item"> <img class="grid__img" src="image/portfolio/img/set1/groovy3.jpg"/></div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/groovy4.jpg"/> </div>
+			<div class="grid__item project"> 
+				<a class="grid__img" href="groovy-automotive.html">
+				<figure>
+					<img src="image/portfolio/img/set1/groovy0.png">
+					<figcaption>
+						<h3>Groovy Automotive</h3>
+						<span>Media Strategy</span>
+					</figcaption>
+				</figure>
+				</a> 
+			</div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/groovy5.jpg"/> </div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/groovy6.jpg"/> </div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/groovy7.jpg"/> </div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/groovy8.jpg"/> </div>
+
+		<!--======insprio=======-->
+			<div class="grid__item"> <img class="grid__img" src="image/portfolio/img/set1/inspiro1.jpg"/></div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/inspiro2.jpg"/> </div>
+			<div class="grid__item"> <img class="grid__img" src="image/portfolio/img/set1/inspiro3.jpg"/></div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/inspiro4.jpg"/> </div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/inspiro5.jpg"/> </div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/inspiro6.jpg"/> </div>
+			<div class="grid__item project"> 
+				<a class="grid__img" href="inspiro-fest.html">
+				<figure>
+					<img src="image/portfolio/img/set1/inspiro0.png">
+					<figcaption>
+						<h3>Insprio Fest</h3>
+						<span>Creative Execution</span>
+					</figcaption>
+				</figure>
+				</a> 
+			</div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/inspiro7.jpg"/> </div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/inspiro8.jpg"/> </div>
+
+		<!--======tesla=======-->
+			<div class="grid__item"> <img class="grid__img" src="image/portfolio/img/set1/tesla1.jpg"/></div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/tesla2.jpg"/> </div>
+			<div class="grid__item"> <img class="grid__img" src="image/portfolio/img/set1/tesla3.jpg"/></div>
+			<div class="grid__item project"> 
+				<a class="grid__img" href="tesla.html">
+				<figure>
+					<img src="image/portfolio/img/set1/tesla0.png">
+					<figcaption>
+						<h3>Next Thing You Charge</h3>
+						<span>Advertising Campaign & Execution</span>
+					</figcaption>
+				</figure>
+				</a> 
+			</div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/tesla4.jpg"/> </div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/tesla5.jpg"/> </div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/tesla6.jpg"/> </div>
+		
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/tesla7.jpg"/> </div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/tesla8.jpg"/> </div>
+
+		<!--======teo=======-->
+			<div class="grid__item"> <img class="grid__img" src="image/portfolio/img/set1/teo1.jpg"/></div>
+			<div class="grid__item project"> 
+				<a class="grid__img" href="teo.html">
+				<figure>
+					<img src="image/portfolio/img/set1/teo0.png">
+					<figcaption>
+						<h3>Be with Your Friends, and Tèo</h3>
+						<span>Brand Essence</span>
+					</figcaption>
+				</figure>
+				</a> 
+			</div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/teo2.jpg"/> </div>
+
+			<div class="grid__item"> <img class="grid__img" src="image/portfolio/img/set1/teo3.jpg"/></div>
+			
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/teo4.jpg"/> </div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/teo5.jpg"/> </div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/teo6.jpg"/> </div>
+		
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/teo7.jpg"/> </div>
+			<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set1/teo8.jpg"/> </div>
+		</div>
+
+
+		<div class="grid grid--mkt">
+			<div class="grid__sizer"></div>
+		</div>
+	
+		<div class="grid grid--cs">
+			<div class="grid__sizer"></div>
+				<div class="grid__sizer"></div>	
+			<!--======ch=======-->
+				<div class="grid__item"> <img class="grid__img" src="image/portfolio/img/set3/ch1.jpg"/></div>
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/ch2.jpg"/> </div>
+				<div class="grid__item project"> 
+					<a class="grid__img" href="chemistry-monopoly.html">
+					<figure>
+						<img src="image/portfolio/img/set3/ch0.jpg">
+						<figcaption>
+							<h3>Chemistry Monopoly</h3>
+							<span>Original Web Game</span>
+						</figcaption>
+					</figure>
+					</a> 
+				</div>
+				<div class="grid__item"> <img class="grid__img" src="image/portfolio/img/set3/ch3.jpg"/></div>
+
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/ch4.jpg"/> </div>
+			
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/ch5.jpg"/> </div>
+
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/ch6.jpg"/> </div>
+
+			<!--======processing=======-->
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/pr1.jpg"/></div>
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/pr2.jpg"/> </div>
+	
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/pr3.jpg"/></div>			
+				<div class="grid__item project"> 
+					<a class="grid__img" href="processing.html">
+					<figure>
+						<img src="image/portfolio/img/set3/pr0.png">
+						<figcaption>
+							<h3>Computor Graphics</h3>
+							<span>Processing</span>
+						</figcaption>
+					</figure>
+					</a> 
+				</div>
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/pr4.jpg"/> </div>
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/pr5.jpg"/> </div>
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/pr6.jpg"/> </div>
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/pr7.jpg"/> </div>
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/pr8.jpg"/> </div>
+
+			<!--======look-for-UT=======-->
+				<div class="grid__item"> <img class="grid__img" src="image/portfolio/img/set3/ch.jpg"/></div>
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/ch.jpg"/> </div>
+				<div class="grid__item"> <img class="grid__img" src="image/portfolio/img/set3/ch.jpg"/></div>
+				<div class="grid__item project"> 
+					<a class="grid__img" href="look-for-UT.html">
+					<figure>
+						<img src="image/portfolio/img/set3/lk0.png">
+						<figcaption>
+							<h3>Look for UT</h3>
+							<span>iOS App</span>
+						</figcaption>
+					</figure>
+					</a> 
+				</div>
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/ch.jpg"/> </div>
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/ch.jpg"/> </div>
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/ch.jpg"/> </div>
+			
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/ch.jpg"/> </div>
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/ch.jpg"/> </div>
+
+			<!--======throne=======-->
+				<div class="grid__item"> <img class="grid__img" src="image/portfolio/img/set3/chpg"/></div>
+				<div class="grid__item project"> 
+					<a class="grid__img" href="defend-the-throne.html">
+					<figure>
+						<img src="image/portfolio/img/set3/th0.png">
+						<figcaption>
+							<h3>Defend the Throne</h3>
+							<span>HTML Web Game</span>
+						</figcaption>
+					</figure>
+					</a> 
+				</div>
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/chpg"/> </div>
+
+				<div class="grid__item"> <img class="grid__img" src="image/portfolio/img/set3/chpg"/></div>
+				
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/chpg"/> </div>
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/chpg"/> </div>
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/chpg"/> </div>
+			
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/chpg"/> </div>
+				<div class="grid__item"><img class="grid__img" src="image/portfolio/img/set3/chpg"/> </div>
+		</div>
+
+
+		<div class="grid grid--cft">
+			<div class="grid__sizer"></div>
+		</div>
+
+
+		<div class="grid grid--vis">
+			<div class="grid__sizer"></div>
+		</div>
+
+
+</main>
+<script src="js/vendor/imagesloaded.pkgd.min.js"></script> 
+<script src="js/vendor/masonry.pkgd.min.js"></script> 
+<script src="js/vendor/anime.min.js"></script> 
+
+<script src="js/vendor/modernizr.custom.js"></script>
+<script src="js/toucheffects.js"></script>
+<script src="js/portfolio.js"></script> 
+
+<script type="text/javascript">
+function startup(){
+	$('#ad').click();
+}
+$('.control__item').click(function(){
+	$('#run').click();
+	console.log("clicking run");
+})
+	
+document.addEventListener("scroll", function() {
+ if (window.pageYOffset > 60){ 
+document.getElementsByClassName('content--side').style.display = "block";
+ }
+	
+ else{
+document.getElementsByClassName('content--side').style.display = "none";
+ }
+}); 
+		
+		</script>
+</body>
+</html>

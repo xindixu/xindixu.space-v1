@@ -5,7 +5,7 @@
 
 <!-- Bootstrap -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="main.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -13,12 +13,15 @@
 <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 <link href="jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" type="text/css">
 <!-- Custome -->
+
+<link rel="shortcut icon" href="image/logo3.png" type="image/x-icon" />
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<link href="custom.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="js/main.js" type="text/javascript"></script>
+<script src="js/scrollspy.js" type="text/javascript"></script>
 <title>Groovy Automotive Media Strategy - Advertising</title>
-	
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115061046-1"></script>
 <script>
@@ -28,23 +31,23 @@
 
   gtag('config', 'UA-115061046-1');
 </script>
-
 </head>
 
 <body data-spy="scroll" data-target="#sidebar-menu" data-offset="80">
 <header>
 	<div class="text-center"> <a href="about.html"><img class="img-fluid" src="image/logo1.png" alt="logo" width="400"/></a> </div>
 </header>
-<nav class="navbar navbar-expand-sm sticky-top" id="topbar-menu">
+<nav class="navbar navbar-expand-md sticky-top" id="topbar-menu">
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 	<div class="collapse navbar-collapse" id="mainNavBar">
 		<ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
 			<li class="nav-item"> <a class="nav-link" href="home.html">Home</a></li>
 			<li class="nav-item"><a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a></li>
 			<!-- Dropdown -->
-			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Portfolio </a>
+			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown"> Portfolio </a>
 				<div class="dropdown-menu"> <a class="dropdown-item" href="advertising.html">Advertising</a> <a class="dropdown-item" href="computer-science.html">Computer Science</a> <a class="dropdown-item" href="crafts.html">Crafts</a><a class="dropdown-item" href="digital-media-production.html">Digital Media Production</a> </div>
 			</li>
+			<li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
 			<li class="nav-item"><a class="nav-link" href="cat.html">Cat</a></li>
 			<li class="nav-item"><a class="nav-link" href="contact.html">Contact </a></li>
 		</ul>
@@ -54,26 +57,21 @@
 	<nav id="sidebar-menu" class="navbar navbar-light navbar-expand-sm flex-column">
 		<div class="container">
 			<nav class="navbar-nav flex-column"> <a class="nav-link" href="#item-1">Project Description</a>
-				<nav class="navbar-nav flex-column"> <a class="nav-link ml-2" href="#item-1-1">Objectives</a> </nav>
+				<nav class="navbar-nav flex-column"> <a class="nav-link ml-2" href="#item-1-1">Business Objectives</a> </nav>
 				<a class="nav-link" href="#item-2">Planning Research &amp; Insights</a>
-				<nav class="navbar-nav flex-column"> <a class="nav-link ml-2" href="#item-2-1">Our Process</a>
-					<nav class="navbar-nav flex-column"> <a class="nav-link ml-4" href="#item-2-1-1">Target Market</a> <a class="nav-link ml-4" href="#item-2-1-2">Geographic Profile</a> </nav>
-					<a class="nav-link ml-2" href="#item-2-2">My Contribution</a>
-					<nav class="navbar-nav flex-column"> <a class="nav-link ml-4" href="#item-2-2-1">Product &amp; Brand Variables</a> <a class="nav-link ml-4" href="#item-2-2-2">Media Menu</a> </nav>
+				<nav class="navbar-nav flex-column"> <a class="nav-link ml-2" href="#item-2-1">Campaign Scope</a> <a class="nav-link ml-2" href="#item-2-2">Market Research</a>
+					<nav class="navbar-nav flex-column"> <a class="nav-link ml-4" href="#item-2-2-1">Product &amp; Brand Variables</a> <a class="nav-link ml-4" href="#item-2-2-2">Target Market</a> <a class="nav-link ml-4" href="#item-2-2-3">Geographic Profile</a> </nav>
+					<a class="nav-link ml-2" href="#item-2-3">Ad Rates</a>
+					<nav class="navbar-nav flex-column"> <a class="nav-link ml-4" href="#item-2-3-1">Media Menu</a> </nav>
 				</nav>
-				<a class="nav-link" href="#item-3">Recommandations &amp; Logistics</a> 
-				<!--nav class="navbar-nav flex-column"> 	
-					<a class="nav-link ml-3" href="#item-3-1">Hands</a> 
-					<a class="nav-link ml-3" href="#item-3-2">Claws</a> 
-					<a class="nav-link ml-3" href="#item-3-3">Lights</a>
-				</nav--> 
-				<a class="nav-link" href="#item-4">Pitch Presentation</a> 
-				<!--nav class="navbar-nav flex-column"> 	
-					<a class="nav-link ml-3" href="#item-4-1">The Prototypes</a> 
-					<a class="nav-link ml-3" href="#item-4-2">Blog Posts</a> 
-					<a class="nav-link ml-3" href="#item-5-3">Progress Report</a>
-				</nav--> 
-				<a class="nav-link" href="#item-5">We as a Team</a> </nav>
+				<a class="nav-link" href="#item-3">Recommandations</a>
+				<nav class="navbar-nav flex-column"> <a class="nav-link ml-3" href="#item-3-1">Communication Platform</a> <a class="nav-link ml-3" href="#item-3-2">Media Objectives</a> </nav>
+				<a class="nav-link" href="#item-4">Logistics</a>
+				<nav class="navbar-nav flex-column"> <a class="nav-link ml-3" href="#item-4-1">Flowchart</a> <a class="nav-link ml-3" href="#item-4-2">Budget</a> <a class="nav-link ml-3" href="#item-4-3">Flights</a>
+					<nav class="navbar-nav flex-column"> <a class="nav-link ml-4" href="#item-4-3-1">Pre-Launch</a> <a class="nav-link ml-4" href="#item-4-3-2">Launch</a> <a class="nav-link ml-4" href="#item-4-3-3">Around Independence Day</a> <a class="nav-link ml-4" href="#item-4-3-4">End of Summer Special</a> <a class="nav-link ml-4" href="#item-4-3-5">Fall</a> <a class="nav-link ml-4" href="#item-4-3-6">Winter/Holiday Season</a> </nav>
+				</nav>
+				<a class="nav-link" href="#item-5">Pitch Presentation</a>
+				<a class="nav-link" href="#item-6">We as a Team</a> </nav>
 		</div>
 	</nav>
 </div>
@@ -84,91 +82,605 @@
 		<p>This is a hypothetical media planning project for Austin local brand, Groovy Automotive. </p>
 		<p>Groovy Automotive has been serving up fun, reliable, and reasonable auto services as the "honest, neighborhood garage" since 1993. Recently, they have been decided to take their story on the road and launch an experimental store in Colorado Springs, CO, a city synonymous with the ideas and persona of "groovy". </p>
 		<div id="item-1-1">
-			<h3>Objectives</h3>
+			<h3>Business Objectives</h3>
 			<div class="text-center"> <img class="img-fluid" src="image/major/groovy/groovy01.png" alt="objectives" width="100%"/> </div>
 		</div>
 	</div>
 	<div class="content" id="item-2">
 		<h2>Planning Research &amp; Insights</h2>
 		<div id="issuu-embed-container-groovy">
-			<div data-configid="29585443/59052022" style="width:100%;" class="issuuembed"></div>
-			<script type="text/javascript" src="https://e.issuu.com/embed.js" async="true"></script> 
+			<div data-configid="29585443/61044981" style="width:100%;" class="issuuembed"></div>
+			<script type="text/javascript" src="https://e.issuu.com/embed.js" async="true"></script>
 		</div>
 		<p>Just as other professional media agencies, we, Agency6, started with conducting a significant amount of primary and secondary research. This benefits us a lot in terms of understanding our brand, its competitors, as well as local market and potential trade area. </p>
-		<p>It is the research, that grant us creativity</p>
-	</div>
-	<div class="content" id="item-2-1">
-		<h3>Our Process</h3>
-		<p>We first distributed tasks among our 6 people. Kaci, Alejandro, and I were responsible for the target market and geographic profile, competitive profile and product &amp; brand variables respectively. These four parts made up our situation analysis. </p>
-		<p>Then, we all explored on media menu. Finally, Regina put everything together in PowerPoint, and make it neat and stylish. </p>
-	</div>
-	<div class="content" id="item-2-1-1">
-		<h5>Target Market</h5>
-		<div class="text-center"> <img class="img-fluid" src="image/major/groovy/groovy03.png" alt="target market" width="100%"/> </div>
-	</div>
-	<div class="content" id="item-2-1-2">
-		<h5>Geographic Profile</h5>
-		<div class="text-center"> <img class="img-fluid" src="image/major/groovy/groovy04.png" alt="geographic profile" width="100%"/> </div>
-	</div>
-	<div class="content" id="item-2-2">
-		<h3>My Contribution</h3>
-		<div class="content" id="item-2-2-1">
-			<h5>Product &amp; Brand Variables</h5>
-			<div class="text-center"> <img class="img-fluid" src="image/major/groovy/groovy02.png" alt="brand variables" width="100%"/></div>
-			<p>I first started with researching on Groovy's website familiarized myself with our brand and product. Then I went to Groovy's Facebook, Yelp, YouTube channel, Groupon, etc for more information. With my research, I came up with three keywords for Groovy: Highest Quality, Friendly, and Local.</p>
+		<p>It is the research, that grant us creativity!</p>
+		<div class="content" id="item-2-1">
+			<h3>Campaign Scope</h3>
+			<div class="text-center"> <img class="img-fluid" src="image/major/groovy/groovy01.png" alt="objectives" width="100%"/> </div>
 		</div>
-		<div class="content" id="item-2-2-2">
-			<h5>Media Menu</h5>
-			<div class="text-center"> <img class="img-fluid" src="image/major/groovy/groovy05.png" alt="media menu" width="100%"/></div>
-			<p>Then, only after Kaci settled down our target audience and geographic profile, could I start with our <a class="tlp" data-toggle="tooltip" title="A summary of cost vs. benefit for all media choices" data-placement="bottom">media menu</a>. After a few hours of exploration, I finally learned how to navigate <a class="tlp" data-toggle="tooltip" title="Standard Rate & Data Services" data-placement="bottom">SRDS</a> database. In that database, I found:</p>
-			
-			<ul>
-				<li><a class="tlp" data-toggle="tooltip" title="Cost per Point, how much it costs to buy 1 rating point or 1% of the target population" data-placement="bottom">CPP</a> for local TV and Radio from <a class="tlp" data-toggle="tooltip" title="Standard Quality & Advertsing Data" data-placement="bottom">SQAD</a></li>
-				<li>Circulation and Ad rates for local newspaper and magazine in our <a class="tlp" data-toggle="tooltip" title="Designated Market Area, a market where the population can receive the same TV and radio station offerings" data-placement="bottom">DMA</a> from <a class="tlp" data-toggle="tooltip" title="Alliance for Audited Media" data-placement="bottom">AAA</a>, with a special focus on zipcode 80904 </li>
-				<li>Display Ad audience metrics &amp; <a class="tlp" data-toggle="tooltip" title="Cost per Thousand, the price of 1,000 ad impressions on 1 webpage" data-placement="bottom">CPM</a> for local &amp; nearby DMA websites from comScore, with a special focus on measuring visitors aged 25-34, 45-54, and 65+.</li>
-			</ul>
-			<p>With Google Adwords, I worked with Regina, first coming up with ideas on various groups of keywords. Then, we entered them into Keyword Planner, set bid to $3.00, and exported data on clicks, impression, cost, <a class="tlp" data-toggle="tooltip" title="Click through Rate, ratio of clicks v. impressions" data-placement="bottom">CTR</a>, Avg <a class="tlp" data-toggle="tooltip" title="Cost per Click" data-placement="bottom">CPC</a>, etc.</p>
-			<p>On Blue Line Media website, Alejandro and I searched for various <a class="tlp" data-toggle="tooltip" title="Out of Home" data-placement="bottom">OOH</a> media placements, collecting data their potential <a class="tlp" data-toggle="tooltip" title="How many people could see the ad everyday" data-placement="bottom">showings</a> and costs. </p>
+		<div class="content" id="item-2-2">
+			<h3>Market Research</h3>
+			<p>We first distributed tasks among our 6 people. Kaci, Alejandro, and I were responsible for the target market and geographic profile, competitive profile and product &amp; brand variables respectively. These four parts made up our situation analysis. </p>
+			<p>Then, we all explored on media menu. Finally, Regina put everything together in PowerPoint, and make it neat and stylish. </p>
+			<div class="content" id="item-2-2-1">
+				<h5>Product &amp; Brand Variables</h5>
+				<div class="text-center"> <img class="img-fluid" src="image/major/groovy/groovy02.png" alt="brand variables" width="100%"/></div>
+				<p>I first started with researching on Groovy's website familiarized myself with our brand and product. Then I went to Groovy's Facebook, Yelp, YouTube channel, Groupon, etc for more information. With my research, I came up with three keywords for Groovy: Highest Quality, Friendly, and Local.</p>
+			</div>
+			<div class="content" id="item-2-2-2">
+				<h5>Target Market</h5>
+				<div class="text-center"> <img class="img-fluid" src="image/major/groovy/groovy03.png" alt="target market" width="100%"/> </div>
+			</div>
+			<div class="content" id="item-2-2-3">
+				<h5>Geographic Profile</h5>
+				<div class="text-center"> <img class="img-fluid" src="image/major/groovy/groovy04.png" alt="geographic profile" width="100%"/> </div>
+			</div>
+		</div>
+		<div class="content" id="item-2-3">
+			<h4>Ad Rates</h4>
+			<div class="content" id="item-2-3-1">
+				<h5>Media Menu</h5>
+				<div class="text-center"> <img class="img-fluid" src="image/major/groovy/groovy05.png" alt="media menu" width="100%"/></div>
+				<p>Then, only after Kaci settled down our target audience and geographic profile, could I start with our <a class="tlp" data-toggle="tooltip" title="A summary of cost vs. benefit for all media choices" data-placement="bottom">media menu</a>. After a few hours of exploration, I finally learned how to navigate <a class="tlp" data-toggle="tooltip" title="Standard Rate & Data Services" data-placement="bottom">SRDS</a> database. In that database, I found:</p>
+				<ul>
+					<li><a class="tlp" data-toggle="tooltip" title="Cost per Point, how much it costs to buy 1 rating point or 1% of the target population" data-placement="bottom">CPP</a> for local TV and Radio from <a class="tlp" data-toggle="tooltip" title="Standard Quality & Advertsing Data" data-placement="bottom">SQAD</a></li>
+					<li>Circulation and Ad rates for local newspaper and magazine in our <a class="tlp" data-toggle="tooltip" title="Designated Market Area, a market where the population can receive the same TV and radio station offerings" data-placement="bottom">DMA</a> from <a class="tlp" data-toggle="tooltip" title="Alliance for Audited Media" data-placement="bottom">AAA</a>, with a special focus on ZIP code 80904 </li>
+					<li>Display Ad audience metrics &amp; <a class="tlp" data-toggle="tooltip" title="Cost per Thousand, the price of 1,000 ad impressions on 1 webpage" data-placement="bottom">CPM</a> for local &amp; nearby DMA websites from comScore, with a special focus on measuring visitors aged 25-34, 45-54, and 65+.</li>
+				</ul>
+				<p>With Google Adwords, I worked with Regina, first coming up with ideas on various groups of keywords. Then, we entered them into Keyword Planner, set bid to $3.00, and exported data on clicks, impression, cost, <a class="tlp" data-toggle="tooltip" title="Click through Rate, ratio of clicks v. impressions" data-placement="bottom">CTR</a>, Avg <a class="tlp" data-toggle="tooltip" title="Cost per Click" data-placement="bottom">CPC</a>, etc.</p>
+				<p>On Blue Line Media website, Alejandro and I searched for various <a class="tlp" data-toggle="tooltip" title="Out of Home" data-placement="bottom">OOH</a> media placements, collecting data their potential <a class="tlp" data-toggle="tooltip" title="How many people could see the ad everyday" data-placement="bottom">showings</a> and costs. </p>
+			</div>
 		</div>
 	</div>
 	<div class="content" id="item-3">
-		<h2>Recommandations &amp; Logistics</h2>
-		<p>Project ongoing, check back later please...</p>
-		<!--div id="item-3-1">
-		<h3>Hand</h3>
-		<p>Delena was good at making artistic designs, while I was good at making incremental innovations. Basically, after we presented on Monday, we would discuss the next steps, based on suggestions, feedbacks, field-notes from classmates, performers, our director, and designer. Then, we would both work on editing the file in Illustrator, and I would go to the foundry and laser cut those wood pieces before Wednesday. After that, we would go paint those pieces, and I would assemble everything together. Delena made most of the gloves, and she has done a great job on sewing. </p>
-		<p>Then, we all explored on media menu. Finally, Regina put everything together in PowerPoint, and make it neat and stylish. </p>
-	</div>
-	<div id="item-3-2">
-		<h3>Claws</h3>
-		<p> At the middle of the semester, one of our classmates dropped the course, so we took over with making teeth and claws. I designed the 3D model in Maya, and cut it into two different lengths for teeth and claws. Then, I learned 3D printing process and started 3D printing. It was a very time-consuming process, and I am very thankful that our classmates contributed their time in monitoring the printer for us. </p>
-	</div>
-	<div id="item-3-3">
-		<h3>Lights</h3>
-		<p>During the final weeks, I jumped into the electric team, helping them to solder the central shields for lighting effects, and making the LED stripes, and EL wires. Since they were lack of people to meet the deadline, we worked very hard, late until 2 am, and all weekends. On Friday, few days before the unleashing date, we found a severe design problem: the LED stripes should be connected in parallel, to ensure the flow direction and enough voltage flowing through. With our hard work, thankfully, we got everything to work on the unleashing event. </p>
-	</div--> 
+		<h2>Recommandations</h2>
+		<div id="issuu-embed-container-groovy2">
+			<div data-configid="29585443/61044890" style="width:100%;" class="issuuembed"></div>
+			<script type="text/javascript" src="https://e.issuu.com/embed.js" async="true"></script>
+		</div>
+		<div id="item-3-1">
+			<h3>Communication Platform</h3>
+			<div class="text-center"> <img class="img-fluid" src="image/major/groovy/groovy06.png" alt="Communication Platform" width="100%"/> </div>
+		</div>
+		<div id="item-3-2">
+			<h3>Media Objectives</h3>
+			<div class="text-center"> <img class="img-fluid" src="image/major/groovy/groovy07.png" alt="Communication Platform" width="100%"/> </div>
+		</div>
 	</div>
 	<div class="content" id="item-4">
-		<h2>Pitch Presentation</h2>
-		<p>Project ongoing, check back later please...</p>
-		<!--div id="item-4-1">
-		<h3>The Prototypes</h3>
-		<p> At the middle of the semester, one of our classmates dropped the course, so we took over with making teeth and claws. I designed the 3D model in Maya, and cut it into two different lengths for teeth and claws. Then, I learned 3D printing process and started 3D printing. It was a very time-consuming process, and I am very thankful that our classmates contributed their time in monitoring the printer for us. </p>
-	</div>
-	<div id="item-4-2">
-		<h3>Blog Posts</h3>
-		<p>During the final weeks, I jumped into the electric team, helping them to solder the central shields for lighting effects, and making the LED stripes, and EL wires. Since they were lack of people to meet the deadline, we worked very hard, late until 2 am, and all weekends. On Friday, few days before the unleashing date, we found a severe design problem: the LED stripes should be connected in parallel, to ensure the flow direction and enough voltage flowing through. With our hard work, thankfully, we got everything to work on the unleashing event. </p>
-	</div>
-	<div id="item-4-3">
-		<h3>Progress Reports</h3>
-		<p>During the final weeks, I jumped into the electric team, helping them to solder the central shields for lighting effects, and making the LED stripes, and EL wires. Since they were lack of people to meet the deadline, we worked very hard, late until 2 am, and all weekends. On Friday, few days before the unleashing date, we found a severe design problem: the LED stripes should be connected in parallel, to ensure the flow direction and enough voltage flowing through. With our hard work, thankfully, we got everything to work on the unleashing event. </p>
-	</div--> 
+		<h2>Logistics</h2>
+		<div id="item-4-1">
+			<h3>Flowchart</h3>
+			<div>
+				<iframe width="100%" height="556" frameborder="0" scrolling="no" src="https://utexas-my.sharepoint.com/personal/xx2673_austin_eid_utexas_edu/_layouts/15/WopiFrame.aspx?sourcedoc={de101e90-e25a-41e4-bd0d-1cb9c3f9b792}&action=embedview&AllowTyping=True&ActiveCell='Schedule'!A1&Item='Schedule'!A1%3AAE25&wdHideGridlines=True&wdInConfigurator=True"></iframe>
+			</div>
+		</div>
+		<div id="item-4-2">
+			<h3>Budget</h3>
+			<div>
+				<iframe width="100%" height="577" frameborder="0" scrolling="no" src="https://utexas-my.sharepoint.com/personal/xx2673_austin_eid_utexas_edu/_layouts/15/WopiFrame.aspx?sourcedoc={de101e90-e25a-41e4-bd0d-1cb9c3f9b792}&action=embedview&AllowTyping=True&ActiveCell='Budget'!A1&Item='Budget'!A1%3AAE26&wdHideGridlines=True&wdInConfigurator=True"></iframe>
+			</div>
+		</div>
+		<div id="item-4-3">
+			<h3>Flights</h3>
+			<ul class="list-unstyled">
+				<li></li>
+				<li>The objectives of all investments on digital media are driving more website visit, increase online appointment; our creative message will focus more on maintenance-based services during Jul - Oct, and more on larger services during Nov - Dec </li>
+				<li>For our target, 28.08% of them spent ranges from $20,000 to $29,999, 18.22% of them spent ranges from $15,000 to $19,999; with this, we could expect an average of $80 tickets from them</li>
+			</ul>
+			<div id="item-4-3-1">
+				<h5>Pre-Launch - Mid-May</h5>
+				<div class="row">
+					<div class="col-md-6">
+						<!-- Card Flip -->
+						<div class="card-flip">
+							<div class="flip">
+								<div class="front">
+									<!-- front content -->
+									<div class="special-card">
+										<div class="card-block">
+											<h5 class="card-title">OOH Billboards</h5>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<div class="special-card">
+										<div class="card-block">
+											<ul class="card-text list-unstyled">
+												<li><b>Direct offensive:</b> steal business from competitors</li>
+												<li>2 billboards near ZIP code 80904 by K&amp;S and Steve Mills</li>
+												<li>600,000 showings, and 90,000 GMPs</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card Flip -->
+					</div>
+					<div class="col-md-6">
+						<!-- Card Flip -->
+						<div class="card-flip">
+							<div class="flip">
+								<div class="front">
+									<!-- front content -->
+									<div class="special-card">
+										<div class="card-block">
+											<h5 class="card-title">Newspaper</h5>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<div class="special-card">
+										<div class="card-block">
+											<ul class="card-text list-unstyled">
+												<li><b>Build awareness:</b> inform Colorado Springs residents about the new store</li>
+												<li><b>Direct purchase:</b> provide coupons to people</li>
+												<li>Colorado Springs Independent from Thur to Sat for 10 col” (7 % penetration in ZIP code 80904)</li>
+												<li>The Gazette on Sun for 10 col” (10 % penetration in ZIP code 80904)</li>
+												<li>164,875 IMPs in Colorado Springs</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card Flip -->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<!-- Card Flip -->
+						<div class="card-flip">
+							<div class="flip">
+								<div class="front">
+									<!-- front content -->
+									<div class="special-card">
+										<div class="card-block">
+											<h5 class="card-title">SEM</h5>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<div class="special-card">
+										<div class="card-block">
+											<ul class="card-text list-unstyled">
+												<li><b>Generate interactions:</b> increase website visits, inform people who consider a switch or need more information after seeing other ads</li>
+												<li>20 clicks immediately after the grand opening </li>
+												<li>Estimated CTR 3.08%, 650 IMPs generated from ZIP code 80904</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card Flip -->
+					</div>
+					<div class="col-md-6">
+						<!-- Card Flip -->
+						<div class="card-flip">
+							<div class="flip">
+								<div class="front">
+									<!-- front content -->
+									<div class="special-card">
+										<div class="card-block">
+											<h5 class="card-title">Social Media</h5>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<div class="special-card">
+										<div class="card-block">
+											<ul class="card-text list-unstyled">
+												<li><b>Foster buzz:</b> invite people to reply and forward our posts for the opening event</li>
+												<li>Give away 50 coupons to 50 random customers</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card Flip -->
+					</div>
+				</div>
+			</div>
+			<ul class="list-unstyled">
+				<li>Monthly estimated IMP / GPM: 255,161</li>
+			</ul>
+			<div id="item-4-3-2">
+				<h5>Launch - June</h5>
+				<div class="row">
+					<div class="col-md-6">
+						<!-- Card Flip -->
+						<div class="card-flip">
+							<div class="flip">
+								<div class="front">
+									<!-- front content -->
+									<div class="special-card">
+										<div class="card-block">
+											<h5 class="card-title">OOH Billboards (Cont.)</h5>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<div class="special-card">
+										<div class="card-block">
+											<ul class="card-text list-unstyled">
+												<li><b>Direct offensive:</b> steal business from competitors</li>
+												<li>2 billboards near ZIP code 80904 by K&amp;S and Steve Mills</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card Flip -->
+					</div>
+					<div class="col-md-6">
+						<!-- Card Flip -->
+						<div class="card-flip">
+							<div class="flip">
+								<div class="front">
+									<!-- front content -->
+									<div class="special-card">
+										<div class="card-block">
+											<h5 class="card-title">OOH Gas Station Nozzles</h5>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<div class="special-card">
+										<div class="card-block">
+											<ul class="card-text list-unstyled">
+												<li><b>Build brand awareness:</b> inform people about Groovy</li>
+												<li><b>Generate direct purchase</b> remind people and urge purchase for maintenance services </li>
+												<li>Two gas stations at 27th and West Cucharras Street (closest gas stations to our location)</li>
+												<li>1,500,000 showings, and 225,000 GMPs</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card Flip -->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<!-- Card Flip -->
+						<div class="card-flip">
+							<div class="flip">
+								<div class="front">
+									<!-- front content -->
+									<div class="special-card">
+										<div class="card-block">
+											<h5 class="card-title">Radio</h5>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<div class="special-card">
+										<div class="card-block">
+											<ul class="card-text list-unstyled">
+												<li><b>Build brand awareness:</b> spread the news of the grand opening</li>
+												<li><b>Urge direct purchase:</b> remind people of auto checks or oil changes and encourage them to come by the shop on their way home </li>
+												<li>Higher emphasis on PMD</li>
+												<li>50% reach * 3 frequency = 150 TRPs</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card Flip -->
+					</div>
+					<div class="col-md-6">
+						<!-- Card Flip -->
+						<div class="card-flip">
+							<div class="flip">
+								<div class="front">
+									<!-- front content -->
+									<div class="special-card">
+										<div class="card-block">
+											<h5 class="card-title">Digital Display Ad</h5>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<div class="special-card">
+										<div class="card-block">
+											<ul class="card-text list-unstyled">
+												<li><b>Generate direct purchase:</b> urge people to click on it with message “get free coupon” </li>
+												<li><b>Generate interactions:</b> drive traffic to our website to increase website visit by 15%</li>
+												<li>9 News, Azteca Colorado &amp; 7 New Denver have about 120,000 A45-54 daily unique visitors </li>
+												<li>Total of 40,000 impression with geo-fences that target at people only from ZIP code 80904</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card Flip -->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<!-- Card Flip -->
+						<div class="card-flip">
+							<div class="flip">
+								<div class="front">
+									<!-- front content -->
+									<div class="special-card">
+										<div class="card-block">
+											<h5 class="card-title">SEM</h5>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<div class="special-card">
+										<div class="card-block">
+											<ul class="card-text list-unstyled">
+												<li><b>Generate interactions:</b> increase website visits, inform people who consider a switch or need more information after seeing other ads</li>
+												<li><b>Build brand awareness:</b> get Groovy on top when people search for general terms, like "oil change", "tun up"</li>
+												<li>Total of 100 clicks every Thursdays to Saturdays</li>
+												<li>Estimated CTR 3.08%, 3200 IMPs generated from ZIP code 80904</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card Flip -->
+					</div>
+				</div>
+
+				<p>Monthly estimated IMP / GPM: 357,000</p>
+			</div>
+			<div id="item-4-3-3">
+				<h5>Post-Launch: Around Independence Day</h5>
+				<div class="row">
+					<div class="col-md-6">
+						<!-- Card Flip -->
+						<div class="card-flip">
+							<div class="flip">
+								<div class="front">
+									<!-- front content -->
+									<div class="special-card">
+										<div class="card-block">
+											<h5 class="card-title">Digital Display Ad</h5>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<div class="special-card">
+										<div class="card-block">
+											<ul class="card-text list-unstyled">
+														<li><b>Generate direct purchase:</b> remind people who need to go travelling for pre-road trip car test</li>
+						<li><b>Recency tactics:</b> people who visit colorado spring and suffered from car accidents might choose Groovy </li>
+						<li>Total of 35,000 IMPs</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card Flip -->
+					</div>
+					<div class="col-md-6">
+						<!-- Card Flip -->
+						<div class="card-flip">
+							<div class="flip">
+								<div class="front">
+									<!-- front content -->
+									<div class="special-card">
+										<div class="card-block">
+											<h5 class="card-title">SEM</h5>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<div class="special-card">
+										<div class="card-block">
+											<ul class="card-text list-unstyled">
+											<li><b>Build brand awareness:</b> gain business from visitors from other towns who never exposed to our ads</li>
+						<li>As our digital display ads reach more targets, we expect more targets will do brand search instead of generic search; thus, we will invest less on SEM</li>
+						<li>70 clicks, 1,800 IMPs</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card Flip -->
+					</div>
+				</div>
+					<p>Monthly estimated IMP / GPM: 36,316</p>
+
+			</div>
+			<div id="item-4-3-4">
+				<h5>Post-Launch: End of Summer Special</h5>
+				<div class="row">
+					<div class="col-md-6">
+						<!-- Card Flip -->
+						<div class="card-flip">
+							<div class="flip">
+								<div class="front">
+									<!-- front content -->
+									<div class="special-card">
+										<div class="card-block">
+											<h5 class="card-title">SEM</h5>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<div class="special-card">
+										<div class="card-block">
+											<ul class="card-text list-unstyled">
+												<li><b>Generate direct purchase:</b> target at people who came back from road trip and their children who need to check their cars before school starts</li>
+						<li><b>Build brand awareness:</b> increase the reach and gain business from people who haven't been exposed to the ads before</li>
+						<li>Break from the previous online display ad </li>
+						<li>140 clicks, 3,700 IMPs</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card Flip -->
+					</div>
+				</div>
+
+				<p>Monthly estimated IMP / GPM: 3,700</p>
+			</div>
+			<div id="item-4-3-5">
+				<h5>Post-Launch: Fall</h5>
+				<div class="row">
+					<div class="col-md-6">
+						<!-- Card Flip -->
+						<div class="card-flip">
+							<div class="flip">
+								<div class="front">
+									<!-- front content -->
+									<div class="special-card">
+										<div class="card-block">
+											<h5 class="card-title">Digital Display Ad</h5>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<div class="special-card">
+										<div class="card-block">
+											<ul class="card-text list-unstyled">
+												<li><b>Generate direct purchase:</b> remind people of pre-road trip car check before holidays</li>
+						<li><b>Generate interactions:</b> drive more website traffics and encourage online appointments</li>
+						<li>Message: premium service, high quality, friendliness</li>
+						<li>9 News, Azteca Colorado &amp; 7 New Denver with more emphasis on Azteca Colorado </li>
+						<li>Around Labor day: 35,000 imps; columbus day: 30,000 imps</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card Flip -->
+					</div>
+					<div class="col-md-6">
+						<!-- Card Flip -->
+						<div class="card-flip">
+							<div class="flip">
+								<div class="front">
+									<!-- front content -->
+									<div class="special-card">
+										<div class="card-block">
+											<h5 class="card-title">SEM</h5>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<div class="special-card">
+										<div class="card-block">
+											<ul class="card-text list-unstyled">
+											<li>Less investment on this because more display ads are on, and previous invenment on SEM in August</li>
+						<li>According to google trend, there are less keyword search comparing to Thanksgiving - Christmas season. we want to save some money on this for the next coming period </li>
+						<li>20 clicks, 520 IMPs around Colombus Day</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card Flip -->
+					</div>
+				</div>
+
+					<p>Monthly estimated IMP / GPM: 65,000</p>
+
+			</div>
+			<div id="item-4-3-6">
+				<h5>Post-Launch: Winter/Holiday Season</h5>
+				<div class="row">
+					<div class="col-md-6">
+						<!-- Card Flip -->
+						<div class="card-flip">
+							<div class="flip">
+								<div class="front">
+									<!-- front content -->
+									<div class="special-card">
+										<div class="card-block">
+											<h5 class="card-title">Digital Display Ad</h5>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<div class="special-card">
+										<div class="card-block">
+											<ul class="card-text list-unstyled">
+												<li>Message: focus on car restoration</li>
+						<li>More emphasis on Azteca Colorado, due to larger percentage of its unique visitors are from our target </li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card Flip -->
+					</div>
+					<div class="col-md-6">
+						<!-- Card Flip -->
+						<div class="card-flip">
+							<div class="flip">
+								<div class="front">
+									<!-- front content -->
+									<div class="special-card">
+										<div class="card-block">
+											<h5 class="card-title">SEM</h5>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<div class="special-card">
+										<div class="card-block">
+											<ul class="card-text list-unstyled">
+											<li>According to google trend, keywords like “oil change”, “auto repair” experienced huge spike during pre-holiday seasons &amp; at the end of the year</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card Flip -->
+					</div>
+				</div>
+				<p>Monthly estimated IMP / GPM: 45,000</p>
+
+			</div>
+		</div>
 	</div>
 	<div class="content" id="item-5">
+		<h2>Pitch Presentation</h2>
+	</div>
+	<div class="content" id="item-6">
 		<h2>We as a Team!</h2>
 		<p>Kaci Beerbower, Alejandro Castellon, Linda Diaz, Regina Galan, Luisana Guevara, Xindi Xu</p>
 	</div>
 </div>
+<!-- content container -->
 <!-- content container -->
 <footer>
 	<div class="text-center">
@@ -180,6 +692,19 @@
 		<p>The University of Texas At Austin&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Austin, TX, 78705, USA&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:512-775-1736">+1 (512)775-1736</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:xindixu@utexas.edu">xindixu@utexas.edu</a></p>
 	</div>
 </footer>
+<script>
 
+// tooltip
+$( function() {
+    $(document).tooltip();
+} );
+
+$(document).tooltip({
+  position: { my: "center", at: "top-10" }
+});
+
+//card flip
+document.querySelector(".card-flip").classList.toggle("flip");
+</script>
 </body>
 </html>
