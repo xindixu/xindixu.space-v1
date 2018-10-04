@@ -2,16 +2,15 @@
 <div>
   <div>
       <full-page ref="fullpage" :options="options" id="fullpage">
-      <div class="section" style="background-image:url('img/home/greeting2.jpg'); background-position: center center; background-size: cover;">
-
+      <div class="section" style="background-image: url('img/home/greeting2.jpg');">
       </div>
-      <div class="section">
+      <div class="section" style="background-image: url('img/home/greeting3.jpg');">
         Second section ...
       </div>
-      <div class="section">
+      <div class="section" style="background-image: url('img/home/greeting4.jpg');">
 
       </div>
-      <div class="section">
+      <div class="section" style="background-image: url('img/home/greeting5.jpg');">
         Forth section ...
       </div>
     </full-page>
@@ -40,5 +39,8 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-
+.section {
+  background-position: center center;
+  background-size: cover;
+}
 </style>
