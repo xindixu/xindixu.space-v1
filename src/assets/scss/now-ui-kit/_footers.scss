@@ -1,8 +1,12 @@
 .footer{
-    padding: 24px 0;
+    padding: 10px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 
     &.footer-default{
-        background-color: #f2f2f2;
+        background-color: rgba(201, 76, 76, 0.3);
     }
 
     nav{
@@ -32,8 +36,8 @@
         }
     }
 
-    .copyright{
-        font-size: $font-size-small;
+    .icon{
+        float: right;
     }
 
     &:after{

@@ -1,5 +1,6 @@
 <template>
-    <div class="wrapper">
+    <div>
+
         <div class="page-header clear-filter" filter-color="blue">
             <parallax class="page-header-image"
                       style="background-image:url('img/home/greeting2.jpg')">
@@ -12,6 +13,7 @@
                 </div>
             </div>
         </div>
+
         <!--div class="main">
             <div class="section section-images">
                 <div class="container">
@@ -57,6 +59,7 @@
     </div>
 </template>
 <script>
+
 import { Parallax } from '@/components';
 import BasicElements from './components/BasicElementsSection';
 import Navigation from './components/Navigation';
