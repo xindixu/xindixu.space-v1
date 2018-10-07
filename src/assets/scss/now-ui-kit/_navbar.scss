@@ -45,13 +45,14 @@
 
         .nav-link:not(.btn){
             text-transform: uppercase;
-            font-size: $font-size-mini;
+            font-size: $font-size-base;
             padding: $padding-base-vertical $padding-base-horizontal;
             line-height: $line-height-nav-link;
 
             i.fab + p,
-            i.now-ui-icons + p{
-                margin-left: 3px;
+            i.now-ui-icons + p,
+            svg + p,{
+                margin-left: 10px;
             }
 
             i.fab,
@@ -65,7 +66,6 @@
 
             i.now-ui-icons{
                 top: 4px;
-                font-size: 16px;
             }
 
             &.profile-photo{
@@ -101,7 +101,7 @@
 
     .navbar-brand{
         text-transform: uppercase;
-        font-size: $font-size-small;
+        font-size: $font-size-base;
         padding-top: $padding-base-vertical;
         padding-bottom: $padding-base-vertical;
         line-height: $line-height-nav-link;

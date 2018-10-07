@@ -1,4 +1,4 @@
-# [XindiXu.space](http://xindixu,space)
+# [XindiXu.space](http://xindixu.space)
 [![version][version-badge]][CHANGELOG]
 
 

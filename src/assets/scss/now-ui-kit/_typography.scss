@@ -3,10 +3,11 @@ input,
 optgroup,
 select,
 textarea{
-    font-family: $sans-serif-family;
+    font-family: $primary-text;
 }
 h1,h2,h3,h4,h5,h6{
     font-weight: $font-weight-normal;
+    font-family: $display-text;
 }
 
 small{
@@ -67,14 +68,12 @@ h6, .h6{
 }
 p{
     line-height: 1.61em;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.2em;
 }
 
 .title{
-    font-weight: $font-weight-bold;
     padding-top: 30px;
-
 
     &.title-up{
         text-transform: uppercase;
@@ -88,7 +87,9 @@ p{
         margin-top: -25px;
     }
 }
-
+.display {
+  font-family: $display-text;
+}
 .description,
 .card-description,
 .footer-big p{

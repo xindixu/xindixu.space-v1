@@ -1,6 +1,5 @@
 <template>
     <nav :class="classes" class="navbar">
-        <div class="container">
             <div class="navbar-translate">
                 <slot v-bind="slotData"></slot>
                 <navbar-toggle-button :toggled="showMenu" @click.native.stop="toggle"></navbar-toggle-button>
@@ -18,7 +17,6 @@
                 </ul>
                 <slot name="after-menu"></slot>
             </div>
-        </div>
     </nav>
 </template>
 <script>
@@ -79,7 +77,7 @@ export default {
     },
     expand: {
       type: [String, Boolean],
-      default: 'lg'
+      default: false
     }
   },
   provide() {

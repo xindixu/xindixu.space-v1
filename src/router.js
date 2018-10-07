@@ -60,8 +60,7 @@ export default new Router({
       name: 'home',
       components: { default: Home, header: AppNavbar, footer: AppFooter },
       props: {
-        header: { colorOnScroll: 10000 }
-
+        header: { colorOnScroll: 0 }
       }
     },
     {
@@ -69,7 +68,7 @@ export default new Router({
       name: 'about',
       components: { default: About, header: AppNavbar, footer: AppFooter },
       props: {
-        header: { colorOnScroll: 400 }
+        header: { colorOnScroll: 0 }
 
       }
     },

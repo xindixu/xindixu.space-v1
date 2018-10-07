@@ -1,9 +1,7 @@
 <template>
     <div class="section section-tabs">
         <div class="container">
-            <div class="title">
-                <h4>Navigation Tabs</h4>
-            </div>
+            <h4 class="title">Navigation Tabs</h4>
             <div class="row">
                 <div class="col-md-10 ml-auto col-xl-6 mr-auto">
                     <p class="category">Tabs with Icons on Card</p>

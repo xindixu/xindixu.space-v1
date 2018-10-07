@@ -6,7 +6,7 @@
             .navbar-collapse{
                 right: auto;
                 left: 0;
-                @include transform-translate-x(-300px);
+                @include transform-translate-x(-150px);
             }
         }
 
@@ -20,7 +20,7 @@
             }
 
             .navbar-translate{
-                @include transform-translate-x(-300px);
+                @include transform-translate-x(-150px);
             }
 
             &.menu-on-left{
@@ -29,16 +29,16 @@
                 }
 
                 .navbar-translate{
-                    @include transform-translate-x(300px);
+                    @include transform-translate-x(150px);
                 }
 
                 .wrapper{
-                    @include transform-translate-x(150px);
+                    @include transform-translate-x(75px);
                 }
 
                 #bodyClick{
                     right: auto;
-                    left: 300px;
+                    left: 75px;
                 }
             }
         }
@@ -147,7 +147,7 @@
         &.menu-on-left .navbar-collapse{
             right: auto;
             left: 0;
-            @include transform-translate-x(-300px);
+            @include transform-translate-x(-150px);
         }
 
         [class*="navbar-expand-"]{
@@ -167,11 +167,11 @@
 
         .nav-open &{
             &.menu-on-left .navbar .navbar-translate{
-                @include transform-translate-x(300px);
+                @include transform-translate-x(150px);
             }
 
             .navbar .navbar-translate{
-                @include transform-translate-x(-300px);
+                @include transform-translate-x(-150px);
             }
 
             &.menu-on-left .navbar-collapse{
@@ -180,7 +180,7 @@
 
             &.menu-on-left #bodyClick{
                 right: auto;
-                left: 300px;
+                left: 150px;
             }
         }
 

@@ -5,8 +5,7 @@
             position="fixed"
             type="primary"
             :transparent="transparent"
-            :color-on-scroll="colorOnScroll"
-            expand="md">
+            :colorOnScroll="colorOnScroll">
         <template slot="default">
           <router-link tag="a" class="nav-brand" to="/">XindiXu.space</router-link>
         </template>
@@ -41,7 +40,9 @@
                   <p>Casper</p>
                 </router-link>
             </li>
+            <p class="copyright">Design and Develop by Xindi Xu <i class="fas fa-heart"></i></p>
         </template>
+
     </navbar>
     <!-- End Navbar Primary -->
   </div>
@@ -71,5 +72,12 @@ export default {
 <style>
 .nav-brand:hover {
   text-decoration: none;
+}
+.copyright{
+  padding: 0 14px;
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  bottom: 75px;
 }
 </style>
