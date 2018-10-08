@@ -20,6 +20,7 @@
 #### Components
 - [x]Footer
 - [x]Navigation bar
+  - [ ]Color & transparency 
 
 ## Development  
 #### Libraries

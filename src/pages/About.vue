@@ -1,83 +1,90 @@
 <template>
-<div>
   <div>
-      <full-page ref="fullpage" :options="fullpageOptions" id="fullpage">
-      <div class="section" style="background-image: url('img/bg/bg7.jpg');">
+    <!-- Slider main container -->
+    <div class="swiper-container">
+    <swiper id="v" :options="swiperOptionV">
+      <swiper-slide style="background-image: url('img/bg/bg1.jpg');"><h1>Vertical Slide 1</h1></swiper-slide>
+      <swiper-slide style="padding:0px; margin: 0px;">
+        <swiper id="h" :options="swiperOptionH">
+          <swiper-slide style="background-image: url('img/bg/bg12.jpg');"><h1>Horizontal Slide 1</h1></swiper-slide>
+          <swiper-slide style="background-image: url('img/bg/bg3.jpg');"><h1>Horizontal Slide 2</h1></swiper-slide>
+          <swiper-slide style="background-image: url('img/bg/bg4.jpg');"><h1>Horizontal Slide 3</h1></swiper-slide>
+          <swiper-slide style="background-image: url('img/bg/bg5.jpg');"><h1>Horizontal Slide 4</h1></swiper-slide>
+          <swiper-slide style="background-image: url('img/bg/bg6.jpg');"><h1>Horizontal Slide 5</h1></swiper-slide>
+          <div class="swiper-pagination swiper-pagination-h" slot="pagination"></div>
+        </swiper>
+      </swiper-slide>
+      <swiper-slide style="background-image: url('img/bg/bg4.jpg');"><h1>Vertical Slide 3</h1></swiper-slide>
+      <swiper-slide style="background-image: url('img/bg/bg14.jpg');"><h1>Vertical Slide 4</h1></swiper-slide>
+      <swiper-slide style="background-image: url('img/bg/bg15.jpg');"><h1>Vertical Slide 5</h1></swiper-slide>
+      <div class="swiper-pagination swiper-pagination-v" slot="pagination"></div>
+    </swiper>
+      <!-- swiper -->
 
-      </div>
-      <div class="section" style="padding:0px; margin: 0px;">
-        <slider style="width:100vw;height:100vh;margin: 0px;" ref="slider" :options="horizontalOptions">
-            <slideritem v-for="(item,index) in horizontalList" :key="index" :style="item.style">{{item.html}}</slideritem>
-        </slider>
-      </div>
-      <div class="section" style="background-image: url('img/bg/bg8.jpg');">
-      </div>
-      <div class="section" style="background-image: url('img/bg/bg9.jpg');">
-      </div>
-      <div class="section" style="background-image: url('img/bg/bg6.jpg');">
-      </div>
-    </full-page>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
-import { Parallax } from '@/components';
-import { slider, slideritem } from '@/components';
-export default {
-  data() {
-    return {
-      verticallyScrolled: false,
-      fullpageOptions: {
-        licenseKey: "OPEN-SOURCE-GPLV3-LICENS",
-        navigation: true,
-        controlArrows: true,
-        scrollHorizontally: true,
-        fitToSection: true
-      },
-      horizontalList:
-      [{
-          html: 'slide1',
-          style: {
-            'background': '#1bbc9b'
+  export default {
+    data() {
+      return {
+        swiperOptionH: {
+          pagination: {
+            el: '.swiper-pagination-h',
+            clickable: true
+          },
+          mousewheel: {
+            forceToAxis: true,
+            invert: true
+          },
+          keyboard: {
+            enabled: true,
+            onlyInViewport: false
           }
         },
-        {
-          html: 'slide2',
-          style: {
-            'background': '#4bbfc3'
+        swiperOptionV: {
+          direction: 'vertical',
+          pagination: {
+            el: '.swiper-pagination-v',
+            clickable: true
+          },
+          mousewheel: {
+            forceToAxis: true,
+            invert: true
+          },
+          keyboard: {
+            enabled: true,
+            onlyInViewport: false
           }
-        },
-        {
-          html: 'slide3',
-          style: {
-            'background': '#7baabe'
-          }
-        }],
-        //Sliding configuration [obj]
-      horizontalOptions: {
-        grabCurser:true,
-        pagination:true,
-        thresholdDistance:100,
-        loop:true,
-        autoplay:4000,
-        slidesToScroll:1
+        }
       }
     }
-  },
-  components: {
-    Parallax,
-    slider,
-    slideritem
   }
-}
 </script>
-<style scoped lang="scss">
-.section {
+
+<style>
+.swiper-container{
+  height: 100vh;
+  width: 100vw;
+}
+.swiper-slide{
   background-position: center center;
   background-size: cover;
+  padding-top: 60px;
 }
-#fp-nav ul>li>a {
-  cursor: default;
+.swiper-pagination{
+  index: 10;
+}
+
+.swiper-pagination-v .swiper-pagination-bullet-active{
+  -webkit-transform: translateX(-25%);
+  -ms-transform: translateX(-25%);
+  transform: translateX(-25%);
+}
+.swiper-pagination-h .swiper-pagination-bullet-active{
+  -webkit-transform: translateY(25%);
+  -ms-transform: translateY(25%);
+  transform: translateY(25%);
 }
 </style>
