@@ -1,0 +1,231 @@
+[
+  {
+    "title":"Nokia DX Website",
+    "id": "dx-labs",
+    "category": "Front-end Devsign",
+    "tags":[
+      "UX/UI Design",
+      "Content Management System",
+      "Developement"
+    ],
+    "tools":[
+      "Wordpress"
+    ],
+    "start":"09/2018",
+    "end": "now"
+  },
+  {
+    "title":"Texas Central Star",
+    "id": "texas-central-star",
+    "category": "Advertising",
+    "tags":[
+      "Research",
+      "Strategy",
+      "Media"
+    ],
+    "tools":[
+      "ESRI",
+      "SQAD"
+    ],
+    "start":"09/2018",
+    "end":"10/2018"
+  },
+  {
+    "title":"Shih's Lab Website",
+    "id": "shihs-lab",
+    "category": "Front-end Devsign",
+    "tags":[
+      "UX/UI Design",
+      "Structure",
+      "Developement"
+    ],
+    "tools":[
+      "Vue.js"
+    ],
+    "start":"09/2018",
+    "end": "now"
+  },
+  {
+    "title":"Brand Safety",
+    "id": "brand-safety",
+    "category": "Advertising",
+    "tags":[
+      "Research"
+    ],
+    "tools":[
+      ""
+    ],
+    "start":"09/2018",
+    "end":"09/2018"
+  },
+  {
+    "title":"Our Next Branch",
+    "id":"our-next-branch",
+    "category": "Marketing",
+    "tags":[
+      "Analysis",
+      "Data Visualization"
+    ],
+    "tools":[
+      "Tableau",
+      "Google Maps API",
+      "ParseHub",
+      "Python",
+      "VBA Macro",
+      "MS Excel"
+    ],
+    "start":"06/2018",
+    "end":"08/2018"
+  },
+  {
+    "title":"DaikinBot & Absolute Unit",
+    "id": "daikinbot",
+    "category": "Marketing",
+    "tags":[
+      "Marketing",
+      "Product Design"
+    ],
+    "tools":[
+      "Maya",
+      "Block.ly",
+      "Javascript",
+      "MS PowerPoint"
+    ],
+    "start":"06/2018",
+    "end":"08/2018"
+  },
+  {
+    "title":"Groovy Automotive",
+    "id": "groovy-automotive",
+    "category": "Advertising",
+    "tags":[
+      "Research",
+      "Strategy",
+      "Media"
+    ],
+    "tools":[
+      "SQUD"
+    ],
+    "start":"02/2018",
+    "end":"05/2018"
+  },
+  {
+    "title":"InspiroFest",
+    "id": "inspirofest",
+    "category": "Advertising",
+    "tags":[
+      "Strategy",
+      "Creative"
+    ],
+    "tools":[
+      "Illustrator",
+      "Photoshop",
+      "After Effects",
+      "P5.js"
+    ],
+    "start":"02/2018",
+    "end":"05/2018"
+  },
+  {
+    "title":"Look For UT",
+    "id": "look-for-ut",
+    "category": "Front-end Devsign",
+    "tags":[
+      "iOS Development",
+      "UX/UI Design",
+      "API Integration"
+    ],
+    "tools":[
+      "Swift",
+      "Google Firebase"
+    ],
+    "start":"10/2017",
+    "end":"12/2017"
+  },
+  {
+    "title":"State Capitol",
+    "id": "state-capitol",
+    "category": "Craft",
+    "tags":[
+    ],
+    "tools":[
+    ],
+    "start":"01/2017",
+    "end":"05/2017"
+  },
+  {
+    "title":"Enron Raptors",
+    "id": "enron-raptors",
+    "category": "Craft",
+    "tags":[
+    ],
+    "tools":[
+      "3D Printer",
+      "Laser Cutter"
+    ],
+    "start":"09/2017",
+    "end":"12/2017"
+  },
+  {
+    "title":"Catformer",
+    "id": "catformer",
+    "category": "Front-end Devsign",
+    "tags":[
+      "Computer Graphics",
+      "Game Development",
+      "UX/UI Design"
+    ],
+    "tools":[
+      "Processing",
+      "P5.js"
+    ],
+    "start":"02/2017",
+    "end":"02/2017"
+  },
+  {
+    "title":"UT Tower",
+    "id": "ut-tower",
+    "category": "Front-end Devsign",
+    "tags":[
+      "Computer Graphics",
+      "UX/UI Design"
+    ],
+    "tools":[
+      "Processing",
+      "P5.js"
+    ],
+    "start":"02/2017",
+    "end":"02/2017"
+  },
+  {
+    "title":"Teo Gelato Branding",
+    "id": "teo-gelato",
+    "category": "Advertising",
+    "tags":[
+      "Strategy",
+      "Creative",
+      "Branding"
+    ],
+    "tools":[
+      "Premiere",
+      "After Effects"
+    ],
+    "start":"10/2017",
+    "end":"10/2017"
+  },
+  {
+    "title":"Tesla Motors",
+    "id": "tesla-motors",
+    "category": "Advertising",
+    "tags":[
+      "Strategy",
+      "Creative",
+      "Execution"
+    ],
+    "tools":[
+      "Photoshop"
+    ],
+    "start":"11/2017",
+    "end":"11/2017"
+  }
+]

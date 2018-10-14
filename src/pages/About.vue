@@ -3,7 +3,10 @@
     <!-- Slider main container -->
     <div class="swiper-container">
     <swiper id="v" :options="swiperOptionV">
-      <swiper-slide style="background-image: url('img/bg/bg1.jpg');"><h1>Vertical Slide 1</h1></swiper-slide>
+      <swiper-slide style="background-image: url('img/bg/bg1.jpg');">
+        <h1 class="display-1">Hey there!</h1>
+        <img src="img/about/photo.png">
+      </swiper-slide>
       <swiper-slide style="padding:0px; margin: 0px;">
         <swiper id="h" :options="swiperOptionH">
           <swiper-slide style="background-image: url('img/bg/bg12.jpg');"><h1>Horizontal Slide 1</h1></swiper-slide>
@@ -71,12 +74,11 @@
 .swiper-slide{
   background-position: center center;
   background-size: cover;
-  padding-top: 60px;
+  padding: 70px 1%;
 }
 .swiper-pagination{
   index: 10;
 }
-
 .swiper-pagination-v .swiper-pagination-bullet-active{
   -webkit-transform: translateX(-25%);
   -ms-transform: translateX(-25%);
@@ -86,5 +88,10 @@
   -webkit-transform: translateY(25%);
   -ms-transform: translateY(25%);
   transform: translateY(25%);
+}
+
+img{
+  width: 300px;
+  height: 300px;
 }
 </style>

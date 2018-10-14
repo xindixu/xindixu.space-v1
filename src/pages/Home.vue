@@ -41,8 +41,6 @@ export default {
         slidesNavigation: true,
         controlArrows: true,
         scrollHorizontally: true
-
-
       }
     }
   }

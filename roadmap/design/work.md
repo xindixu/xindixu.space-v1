@@ -2,15 +2,24 @@
 
 ## Category
 - Advertising
+  - Research
+  - Strategy
   - Creative
   - Media
   - Information Deck
 - Marketing
-  - Research & Analysis
+  - Research
+  - Analysis
   - Product Design
 - Front-end Devsign
   - CMS
-  -
+  - UX/UI Design
+  - Structure
+  - Develop
+- Craft
+- Media Production
+- 
+
 
 ## Tool
 - Advertising

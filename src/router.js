@@ -12,6 +12,7 @@ import About from './pages/About.vue';
 import Work from './pages/Work.vue';
 import Blog from './pages/Blog.vue';
 import Casper from './pages/Casper.vue';
+import WorkDetail from './pages/WorkDetail.vue';
 
 import AppNavbar from './layout/AppNavbar.vue';
 import AppFooter from './layout/AppFooter.vue';
@@ -79,6 +80,15 @@ export default new Router({
       props: {
         header: { colorOnScroll: 400 }
 
+      }
+    },
+    {
+      path: '/work/:id',
+      name: 'workDetail',
+      components: { default: WorkDetail, header: AppNavbar, footer: AppFooter },
+      props: {
+        default: true,
+        header: { colorOnScroll: 400 }
       }
     },
     {

@@ -18,7 +18,7 @@
     </div>
 </template>
 <script>
-	export default{
+export default{
 name:'quick-menu',
   props:{
     menuCount:{
@@ -186,7 +186,7 @@ animation: bounce 1s linear 1s; */
   -moz-transition: all 1s ease;
   transition: all 1s ease;
   right: 30px;
-	z-index: 100000;
+	z-index: 100;
   > .menu {
     display: block;
     position: absolute;

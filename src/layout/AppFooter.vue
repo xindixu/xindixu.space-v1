@@ -46,4 +46,7 @@ export default {
 };
 </script>
 <style>
+footer{
+  z-index: 100;
+}
 </style>
