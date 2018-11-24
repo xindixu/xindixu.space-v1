@@ -5,7 +5,7 @@
     <swiper id="v" :options="swiperOptionV">
       <swiper-slide style="background-image: url('img/bg/bg1.jpg');">
         <h1 class="display-1">Hey there!</h1>
-        <img src="img/about/photo.png">
+        <img class="self" src="img/about/photo.png">
       </swiper-slide>
       <swiper-slide style="padding:0px; margin: 0px;">
         <swiper id="h" :options="swiperOptionH">
@@ -29,68 +29,70 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        swiperOptionH: {
-          pagination: {
-            el: '.swiper-pagination-h',
-            clickable: true
-          },
-          mousewheel: {
-            forceToAxis: true,
-            invert: true
-          },
-          keyboard: {
-            enabled: true,
-            onlyInViewport: false
-          }
+export default {
+  data() {
+    return {
+      swiperOptionH: {
+        speed: 500,
+        pagination: {
+          el: '.swiper-pagination-h',
+          clickable: true
         },
-        swiperOptionV: {
-          direction: 'vertical',
-          pagination: {
-            el: '.swiper-pagination-v',
-            clickable: true
-          },
-          mousewheel: {
-            forceToAxis: true,
-            invert: true
-          },
-          keyboard: {
-            enabled: true,
-            onlyInViewport: false
-          }
+        mousewheel: {
+          forceToAxis: true,
+          invert: true
+        },
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false
+        }
+      },
+      swiperOptionV: {
+        direction: 'vertical',
+        speed: 500,
+        pagination: {
+          el: '.swiper-pagination-v',
+          clickable: true
+        },
+        mousewheel: {
+          forceToAxis: true,
+          invert: true
+        },
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false
         }
       }
-    }
+    };
   }
+};
 </script>
 
 <style>
-.swiper-container{
+.swiper-container {
   height: 100vh;
   width: 100vw;
 }
-.swiper-slide{
+.swiper-slide {
   background-position: center center;
   background-size: cover;
   padding: 70px 1%;
 }
-.swiper-pagination{
+.swiper-pagination {
   index: 10;
 }
-.swiper-pagination-v .swiper-pagination-bullet-active{
+.swiper-pagination-v .swiper-pagination-bullet-active {
   -webkit-transform: translateX(-25%);
   -ms-transform: translateX(-25%);
   transform: translateX(-25%);
 }
-.swiper-pagination-h .swiper-pagination-bullet-active{
+.swiper-pagination-h .swiper-pagination-bullet-active {
   -webkit-transform: translateY(25%);
   -ms-transform: translateY(25%);
   transform: translateY(25%);
 }
 
-img{
+.self {
   width: 300px;
   height: 300px;
 }

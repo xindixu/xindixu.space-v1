@@ -14,6 +14,8 @@ import Blog from './pages/Blog.vue';
 import Casper from './pages/Casper.vue';
 import WorkDetail from './pages/WorkDetail.vue';
 
+import Backup from './pages/Backup.vue';
+
 import AppNavbar from './layout/AppNavbar.vue';
 import AppFooter from './layout/AppFooter.vue';
 
@@ -103,6 +105,14 @@ export default new Router({
       path: '/casper',
       name: 'casper',
       components: { default: Casper, header: AppNavbar, footer: AppFooter },
+      props: {
+        header: { colorOnScroll: 400 }
+      }
+    },
+    {
+      path: '/backup',
+      name: 'backup',
+      components: { default: Backup, header: AppNavbar, footer: AppFooter },
       props: {
         header: { colorOnScroll: 400 }
       }

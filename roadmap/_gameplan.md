@@ -12,9 +12,9 @@
 
 #### Styles
 
-- [ ]Color
+- [x]Color
 - [x]Font
-  - [ ]Font size
+  - [x]Font size
 - [ ]Logo
 
 #### Components

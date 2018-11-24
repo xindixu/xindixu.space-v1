@@ -1,12 +1,13 @@
 # Main Content
 #### Home
-1. Headline slideshow
+1. Fullpage background video
+2. Typewriter effect of who I am [snippets](https://css-tricks.com/snippets/css/typewriter-effect/)
 2. How can I help you
 3. Recent updates
 4. Contact & explore more
 
 ##### About
-1. Career thoughts: full-stack designer
+1. Career thoughts: full-stack devsigner
 2. 3 parts of daily routine: School + Work + Life
 3. Short video of me maybe?
 4. Skills
@@ -16,7 +17,6 @@
 ##### Work
 1. card collection http://www.monolinea.com/portfolio/
 2. Reversed chronological order  
-3. bootstrap card maybe?
 
 ##### Experience
 1. Timeline:
