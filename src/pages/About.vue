@@ -5,7 +5,7 @@
       <swiper id="v" :options="swiperOptionV">
         <swiper-slide
           id="slide-1"
-          style="background-image: url('img/bg/bg1.jpg');"
+          style="background-image: url('img/bg/bg14.jpg');"
         >
           <b-row class="mb-5">
             <b-col>
@@ -126,7 +126,13 @@
         </swiper-slide>
         <swiper-slide
           id="slide-2"
-          style="background-image: url('img/bg/bg4.jpg');"
+          style="background-image: url('img/bg/bg14.jpg');"
+        >
+          <h1 class="display-3">I'm working hard to become a ...</h1>
+        </swiper-slide>
+        <swiper-slide
+          id="slide-3"
+          style="background-image: url('img/bg/bg14.jpg');"
         >
           <h1 class="display-3">I am ...</h1>
           <b-row class="mt-2" id="values">
@@ -208,8 +214,21 @@
             </b-col>
           </b-row>
         </swiper-slide>
-        <swiper-slide style="background-image: url('img/bg/bg14.jpg');">
+        <swiper-slide
+          id="slide-4"
+          style="background-image: url('img/bg/bg14.jpg');"
+        >
           <h1 class="display-3">I am skilled in ...</h1>
+          <ul v-for="data in skills.design">
+            <li>
+              <img class="img-fluid"
+                :src="'img/about/skills/' + data + '.svg'"
+                :onmouseover="'this.src=img/about/skills/' + data + '.svg;'"
+                :onmouseout="'this.src=img/about/skills/' + data + '0.svg;'"
+                width="50"
+                alt=""/>
+            </li>
+          </ul>
         </swiper-slide>
         <swiper-slide style="padding:0px; margin: 0px;">
           <swiper id="h" :options="swiperOptionH">
@@ -233,9 +252,6 @@
               slot="pagination"
             ></div>
           </swiper>
-        </swiper-slide>
-        <swiper-slide style="background-image: url('img/bg/bg15.jpg');">
-          <h1>Vertical Slide 5</h1>
         </swiper-slide>
         <div
           class="swiper-pagination swiper-pagination-v"
@@ -281,9 +297,20 @@ export default {
           enabled: true,
           onlyInViewport: false
         }
+      },
+      skills: {
+        design: ['ps', 'ai', 'id', 'pr', 'ae', 'an', 'maya'],
+        web: ['html', 'css', 'js', 'bootstrap', 'vue', 'angular', 'node.js'],
+        programming: ['java', 'python', 'processing', 'swift', 'phaser']
       }
     };
+  },
+  methods:{
+    changeColor: () => {
+
+    }
   }
+
 };
 </script>
 
