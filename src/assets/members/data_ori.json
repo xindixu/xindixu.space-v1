@@ -1,0 +1,78 @@
+[
+  {
+    "Principle":[
+      {
+        "name":"Chih-Kang Shih",
+        "email":"shih@physics.utexas.edu",
+				"id":"chihkang-shih"
+      }
+    ]
+  },
+  {
+    "Post-Doctoral":[
+      {
+        "name":"Fei Cheng",
+        "email":"chengfeitx@gmail.com",
+        "interest":"Optical properties and applications of plasmonic matematerials and metasurfaces",
+        "background":"",
+				"id":"fei-cheng"
+      },
+      {
+        "name":"Hyoungdo Nam",
+        "email":"nhd2357@physics.utexas.edu",
+        "project":"k",
+        "background":"",
+				"id":"hyoungdo-nam"
+      },
+      {
+        "name":"Yutsung Tsai",
+        "email":"yutsungt@utexas.edu",
+        "project":"Optical polarization study of 2D transition metal dichalcogenide (TMDs) devices",
+        "tool":"Micro-photoluminescence, Raman spectroscopy, AFM, CVD",
+        "background":"2009-2015 PhD, University at Buffalo",
+				"id":"yutsung-tsai"
+      },
+      {
+        "name":"Chendong Zhang",
+        "email":"cdzhang@physics.utexas.edu",
+        "project":"Studying the proximity effect of 2D superconductor with STM",
+        "tool":"Low Temperature Scanning Tunneling Microscope Molecular beam epitaxy (MBE) system",
+        "interest":"Electronic Transport of low dimensional nanostructure; Self-assembling of organic molecular on metal surface Superconductivity of 2D film",
+				"id":"chendong-zhang"
+
+      }
+    ]
+  },
+  {
+    "Graduate Students":[
+      {
+        "name":"Yuxuan Chen",
+        "email":"cyuxuan@physics.utexas.edu",
+        "project":"Growth, engineering and characterization of transition metal dichalcogenide (TMD) single layers and topological insulators (TI)",
+        "tool":"Low Temperature Scanning Tunneling Microscope Molecular beam epitaxy (MBE) system",
+        "interest":"Electronic Transport of low dimensional nanostructure; Self-assembling of organic molecular on metal surface Superconductivity of 2D film",
+        "background":"2009-Present UT Austin, aiming at a PhD degree\n2005-2009  Peking University, Bachelor of Science",
+				"id":"yuxuan-chen"
+      },
+      {
+        "name":"Matt Dwyer",
+        "email":"matthew.sean.dwyer@gmail.com",
+        "project":"Growth, engineering and characterization of transition metal dichalcogenide (TMD) single layers and topological insulators (TI)",
+        "tool":"Low Temperature Scanning Tunneling Microscope Molecular beam epitaxy (MBE) system",
+        "interest":"Building UHV systems",
+				"id":"matt-dwyer"
+
+      }
+    ]
+  },
+  {
+    "Alumni":[
+      {
+        "name":"Alex Johnson",
+        "email":"adj59@utexas.edu",
+        "project":"I explore the optical properties of semiconductor nanostructures using PL spectroscopy and TCSPC. My current research is focused on the study of single layer transition metal dichalcogenides.",
+				"id":"alex-johnson"
+      }
+    ]
+  }
+]

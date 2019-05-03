@@ -1,5 +1,5 @@
 var AppShowcase = (function() {
-	
+
 	var $el = $( '#ac-wrapper' ),
 		// device element
 		$device = $el.find( '.ac-device' ),
@@ -33,7 +33,7 @@ var AppShowcase = (function() {
 		},
 		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
 		// HTML Body element
-		$body = $( 'body' ); 
+		$body = $( 'body' );
 
 	function init() {
 		// show grid
@@ -79,14 +79,14 @@ var AppShowcase = (function() {
 		}
 
 		animating = true;
-		
+
 		if( direction === 'next' ) {
 			current = current < screensCount - 1 ? ++current : 0;
 		}
 		else if( direction === 'prev' ) {
 			current = current > 0 ? --current : screensCount - 1;
 		}
-		
+
 		// next screen to show
 		var $nextScreen = $screens.eq( current );
 
@@ -107,12 +107,12 @@ var AppShowcase = (function() {
 				// current image fades out / new image fades in
 				$screenImg.css( {
 					opacity : 0,
-					transform : direction === 'next' ? 'translateY(100px)' : 'scale(0.9)' 
+					transform : direction === 'next' ? 'translateY(100px)' : 'scale(0.9)'
 				} ).on( transEndEventName, function() { $( this ).remove(); } );
 
 				$nextScreenImg.css( {
 					opacity : 1,
-					transform : direction === 'next' ? 'scale(1)' : 'translateY(0px)' 
+					transform : direction === 'next' ? 'scale(1)' : 'translateY(0px)'
 				} ).on( transEndEventName, function() {
 					$screenImg = $( this ).off( transEndEventName );
 					animating = false;

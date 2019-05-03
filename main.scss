@@ -3,7 +3,7 @@ $theme-colors: (
   "secondary": #F37343,
   "info": #FEE9DE,
   "light": #FEE9DE,
-    "dark": #AF6A45
+  "dark": #AF6A45
 );
 
 $font-size-base:              0.8rem !default;
@@ -20,4 +20,3 @@ $headings-color:              #FBAE4B !default;
 $badge-font-size:                   50% !default;
 
 @import "node_modules/bootstrap/scss/bootstrap";
-
